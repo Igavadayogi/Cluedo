@@ -15,11 +15,8 @@ public class Cluedo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        // Test change from matthew
-        //test from Jackson
-        //test from Jackson 2
-        //test from Yogi 
+         Menu menu = new Menu();
+         menu.setVisible(true);
     }
     
 }
