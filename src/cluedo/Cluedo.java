@@ -18,6 +18,7 @@ public class Cluedo {
         // TODO code application logic here
         // Test change from matthew
         //test from Jackson
+        //test from Jackson 2
     }
     
 }
