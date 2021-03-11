@@ -1256,7 +1256,7 @@
           <Color blue="0" green="99" red="33" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\conservatory.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\conservatory.PNG"/>
         </Property>
       </Properties>
     </Component>
@@ -1266,7 +1266,7 @@
           <Color blue="0" green="99" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\kitchen.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\kitchen.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1279,7 +1279,7 @@
           <Color blue="0" green="33" red="66" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\billiard room.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\billiard room.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1292,7 +1292,7 @@
           <Color blue="ff" green="33" red="66" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\hall.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\hall.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1305,7 +1305,7 @@
           <Color blue="cc" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\library.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\library.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1318,7 +1318,7 @@
           <Color blue="66" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\dining room.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\dining room.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1331,7 +1331,7 @@
           <Color blue="66" green="66" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\study.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\study.PNG"/>
         </Property>
       </Properties>
     </Component>
@@ -1341,7 +1341,7 @@
           <Color blue="66" green="0" red="66" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\lounge.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\lounge.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1354,7 +1354,7 @@
           <Color blue="66" green="66" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\ball room.PNG"/>
+          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\ball room.PNG"/>
         </Property>
       </Properties>
       <Events>

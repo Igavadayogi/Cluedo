@@ -272,10 +272,10 @@ public class Board extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 51));
 
         conservatory.setBackground(new java.awt.Color(51, 153, 0));
-        conservatory.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\conservatory.PNG")); // NOI18N
+        conservatory.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\conservatory.PNG")); // NOI18N
 
         kitchen.setBackground(new java.awt.Color(255, 153, 0));
-        kitchen.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\kitchen.PNG")); // NOI18N
+        kitchen.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\kitchen.PNG")); // NOI18N
         kitchen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kitchenActionPerformed(evt);
@@ -283,7 +283,7 @@ public class Board extends javax.swing.JFrame {
         });
 
         billiard_room.setBackground(new java.awt.Color(102, 51, 0));
-        billiard_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\billiard room.PNG")); // NOI18N
+        billiard_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\billiard room.PNG")); // NOI18N
         billiard_room.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 billiard_roomActionPerformed(evt);
@@ -291,7 +291,7 @@ public class Board extends javax.swing.JFrame {
         });
 
         hall.setBackground(new java.awt.Color(102, 51, 255));
-        hall.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\hall.PNG")); // NOI18N
+        hall.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\hall.PNG")); // NOI18N
         hall.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hallActionPerformed(evt);
@@ -299,7 +299,7 @@ public class Board extends javax.swing.JFrame {
         });
 
         library.setBackground(new java.awt.Color(0, 0, 204));
-        library.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\library.PNG")); // NOI18N
+        library.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\library.PNG")); // NOI18N
         library.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 libraryActionPerformed(evt);
@@ -307,7 +307,7 @@ public class Board extends javax.swing.JFrame {
         });
 
         dining_room.setBackground(new java.awt.Color(0, 102, 102));
-        dining_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\dining room.PNG")); // NOI18N
+        dining_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\dining room.PNG")); // NOI18N
         dining_room.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dining_roomActionPerformed(evt);
@@ -315,10 +315,10 @@ public class Board extends javax.swing.JFrame {
         });
 
         study.setBackground(new java.awt.Color(255, 102, 102));
-        study.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\study.PNG")); // NOI18N
+        study.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\study.PNG")); // NOI18N
 
         lounge.setBackground(new java.awt.Color(102, 0, 102));
-        lounge.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\lounge.PNG")); // NOI18N
+        lounge.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\lounge.PNG")); // NOI18N
         lounge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loungeActionPerformed(evt);
@@ -326,7 +326,7 @@ public class Board extends javax.swing.JFrame {
         });
 
         ball_room.setBackground(new java.awt.Color(255, 102, 102));
-        ball_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Pictures\\cluedo\\ball room.PNG")); // NOI18N
+        ball_room.setIcon(new javax.swing.ImageIcon("C:\\Users\\igava\\Documents\\NetBeansProjects\\Cluedo\\cluedo\\ball room.PNG")); // NOI18N
         ball_room.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ball_roomActionPerformed(evt);
