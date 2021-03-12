@@ -161,7 +161,7 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
                                       <Component id="hall" min="-2" pref="143" max="-2" attributes="0"/>
-                                      <EmptySpace pref="6" max="32767" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace max="32767" attributes="0"/>
@@ -344,106 +344,93 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="study" min="-2" pref="167" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField146" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField147" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField138" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField139" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField140" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField145" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField144" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField143" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField142" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField141" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField137" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField136" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField135" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jTextField134" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                  </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField146" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField147" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField138" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField139" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField140" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField145" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField144" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField143" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField142" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField141" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField137" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField136" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField135" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField134" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <Component id="study" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="dining_room" min="-2" pref="182" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField47" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField46" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField47" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField46" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField45" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField44" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="jTextField43" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="dining_room" min="-2" pref="182" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField45" min="-2" pref="20" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jTextField44" min="-2" pref="20" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jTextField43" min="-2" pref="20" max="-2" attributes="0"/>
-                                                      <Group type="102" attributes="0">
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jTextField27" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                                              <Component id="jTextField35" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Group type="102" alignment="1" attributes="0">
-                                                                  <Component id="jTextField32" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField30" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField34" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField33" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField31" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField28" min="-2" pref="20" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <Group type="102" alignment="1" attributes="0">
-                                                                  <Component id="jTextField40" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField38" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField42" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField41" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField39" min="-2" pref="20" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="-2" attributes="0"/>
-                                                                  <Component id="jTextField36" min="-2" pref="20" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
-                                                          <EmptySpace max="32767" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jTextField185" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                                              <Component id="jTextField186" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                  </Group>
+                                              <Component id="jTextField27" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="jTextField35" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jTextField32" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField30" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField34" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField33" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField31" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField28" min="-2" pref="20" max="-2" attributes="0"/>
                                               </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="jTextField40" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField38" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField42" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField41" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField39" min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField36" min="-2" pref="20" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTextField185" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="jTextField186" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -585,7 +572,7 @@
                                           </Group>
                                           <Component id="jTextField219" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="9" max="32767" attributes="0"/>
+                                      <EmptySpace pref="24" max="32767" attributes="0"/>
                                       <Component id="ball_room" min="-2" pref="194" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -724,7 +711,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="study" min="-2" max="-2" attributes="0"/>
+                                  <Component id="study" min="-2" pref="19" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -960,8 +947,6 @@
                                   <Component id="jTextField40" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTextField35" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Component id="dining_room" min="-2" pref="139" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="jTextField185" min="-2" max="-2" attributes="0"/>
@@ -969,6 +954,8 @@
                               <Component id="jTextField186" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dining_room" min="-2" pref="139" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1255,18 +1242,12 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="99" red="33" type="rgb"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\conservatory.PNG"/>
-        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="kitchen">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="99" red="ff" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\kitchen.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1278,9 +1259,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="33" red="66" type="rgb"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\billiard room.PNG"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="billiard_roomActionPerformed"/>
@@ -1290,9 +1268,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="33" red="66" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\hall.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1304,9 +1279,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="0" red="0" type="rgb"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\library.PNG"/>
-        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="libraryActionPerformed"/>
@@ -1316,9 +1288,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="0" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\dining room.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1330,18 +1299,12 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="ff" type="rgb"/>
         </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\study.PNG"/>
-        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="lounge">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="66" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\lounge.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1352,9 +1315,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="ff" type="rgb"/>
-        </Property>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Documents\NetBeansProjects\Cluedo\cluedo\ball room.PNG"/>
         </Property>
       </Properties>
       <Events>
@@ -1367,9 +1327,6 @@
           <Color blue="66" green="0" red="66" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\igava\Pictures\cluedo\Capture.PNG"/>
-        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField5">

@@ -31,8 +31,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace pref="156" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jButton2" min="-2" pref="90" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Component id="exitButton" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Component id="optionsButton" min="-2" pref="90" max="-2" attributes="0"/>
+                  <Component id="startButton" min="-2" pref="90" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
           </Group>
@@ -44,10 +45,12 @@
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="40" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="startButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="116" max="32767" attributes="0"/>
+              <Component id="optionsButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="exitButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -61,18 +64,26 @@
         <Property name="text" type="java.lang.String" value="Cluedo!"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="startButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Start"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="optionsButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Options"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="exitButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Exit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
