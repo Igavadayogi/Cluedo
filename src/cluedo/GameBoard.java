@@ -49,16 +49,21 @@ public class GameBoard implements ActionListener{
     }
     public void accuse(){
         //make accusations
+        //player will need to choose the cards either before or at this step
     }
     
-    public void validAccusation(){
+    public void checkAccusation(){
         //check if the player's accusation matches with the envelope
         //get contents of the envelope and compare
         //if true that player wins
+      
+        //get from envelope
+        //if accuse cards = envelope card then win
+        //otheriwse game continues
     }
     
     public void win(){
-        
+        //display win message, end game
     }
 
     public void movePlayer(){
@@ -73,8 +78,7 @@ public class GameBoard implements ActionListener{
     
     public void nextTurn(){
         //give control to next player
-        //no idea how to do
-        //maybe no need at all, with rely on plyare discipline9bad design i know)
+        //show next player information, remove current player information
     }
     
     public void rollDice(){
