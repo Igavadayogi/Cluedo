@@ -36,6 +36,8 @@ public class GameBoard implements ActionListener{
                 boardArray[i][j] = "_";
             }
         }
+        boardArray[1][1] = "R1"; //maybe use this method to mark rooms/paint over with ome 
+        //big buton/Jpanel
 //        to print board
 //        for (int i = 0; i < grid.length; i++) {
 //			System.out.print(i);
@@ -46,6 +48,38 @@ public class GameBoard implements ActionListener{
         
     }
 
+    public void movePlayer(){
+        //click on board, if exceed diceroll display error message
+        //if diagonal display error
+    }
+    
+    public void checkMove(){
+        //check with dice and if diagnal(compare with board coordinates
+    }
+    
+    public void nextTurn(){
+        //give control to next player
+        //no idea how to do
+        //maybe no need at all, with rely on plyare discipline9bad design i know)
+    }
+    
+    public void rollDice(){
+        //done, just call from Dice class
+    }
+    
+    public void chooseSaveGameOrNot(){
+        //shows when exiting the game
+    }
+    
+    public void saveGame(){
+        //write text file, use buffer reader
+        //should be a button 
+    }
+    
+    public void loadGame(){
+        //load from text file, use file reader
+    }
+    
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
