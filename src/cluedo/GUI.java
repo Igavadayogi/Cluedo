@@ -27,19 +27,20 @@ public class GUI {
     }
     
     
-    public void buttonPanel(){
-        JPanel panelButtons = new JPanel();
-        panelButtons.setBackground(Color.YELLOW);
-        panelButtons.setLayout(new GridLayout(4,5));
-        
-        for(int i = 0; i< 25; i++){
-            for(int j = 0; j< 25; j++){
-                JButton button = new JButton(i + " " + j);
-                panelButtons.add(button);
-                space[i][j] = button;
-            }
-        }
-        gameFrame.add(panelButtons);
-    }
+//    public void buttonPanel(){
+//        JPanel panelButtons = new JPanel();
+//        panelButtons.setBackground(Color.YELLOW);
+//        panelButtons.setLayout(new GridLayout(4,5));
+//        
+//        for(int i = 0; i< 25; i++){
+//            for(int j = 0; j< 25; j++){
+//                JButton button = new JButton(i + " " + j);
+//                panelButtons.add(button);
+//                space[i][j] = button;
+//            }
+//        }
+//        gameFrame.add(panelButtons);
+//    }
     
+    //either a 2d array of buttons or panels will form the tiles and rooms
 }

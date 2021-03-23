@@ -47,6 +47,19 @@ public class GameBoard implements ActionListener{
 //			System.out.println();
         
     }
+    public void accuse(){
+        //make accusations
+    }
+    
+    public void validAccusation(){
+        //check if the player's accusation matches with the envelope
+        //get contents of the envelope and compare
+        //if true that player wins
+    }
+    
+    public void win(){
+        
+    }
 
     public void movePlayer(){
         //click on board, if exceed diceroll display error message
@@ -55,6 +68,7 @@ public class GameBoard implements ActionListener{
     
     public void checkMove(){
         //check with dice and if diagnal(compare with board coordinates
+        //diplay error when player move into room without using the door
     }
     
     public void nextTurn(){
