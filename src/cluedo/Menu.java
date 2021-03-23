@@ -91,8 +91,9 @@ public class Menu extends javax.swing.JFrame {
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         JFrame game = new JFrame();
         GameBoard gameBoard = new GameBoard();
-        game.add(gameBoard);
-        game.setVisible(true);
+        //game.add(gameBoard);
+        //game.setVisible(true);
+
     }//GEN-LAST:event_startButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
