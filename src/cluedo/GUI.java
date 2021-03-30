@@ -11,6 +11,7 @@ import static javafx.scene.paint.Color.color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -18,12 +19,18 @@ import javax.swing.JPanel;
  */
 public class GUI {
 
-    
+    GameBoard newGame;
+    JFrame frame;
+
+    public GUI(){
+        newGame = new GameBoard();
+    }
     
     public void init(){
-        JFrame gameFrame = new JFrame();
-        gameFrame.setVisible(true);
-        gameFrame.setSize(500,500);
+        frame = new JFrame("Cluedo");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setResizable(true);
+        
     }
     
     
