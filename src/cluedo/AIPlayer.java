@@ -5,14 +5,32 @@
  */
 package cluedo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author user
  */
 public class AIPlayer {
     
+    public AIPlayer (){
+        this.action = new ArrayList<>();
+        action chooseAction  = action.get((int)(Math.random() * ((3-1)+1))+1);//use RNG to pick one action
+    }
+    
+    /**
+     * Representing a set of action.
+     */
+    private final ArrayList<action> action;
+    
     //an array filled with actions
     //e.g.: [move,move,move,accuse,move,move,move]
-    //use RNG to pick one action
-    
-}
+    private static class action {
+
+        public action() {
+        String[] action = {"Move","Accuse","Roll Dice"};
+        }
+    }
+
+
+}   
