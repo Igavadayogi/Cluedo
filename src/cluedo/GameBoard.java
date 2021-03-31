@@ -33,11 +33,19 @@ public class GameBoard implements ActionListener{
       
         for(int i = 0; i< 25; i++){
             for(int j = 0; j< 25; j++){
-                boardArray[i][j] = "_";
+                boardArray[i][j] = " _ ";
             }
         }
-        boardArray[1][1] = "R1"; //maybe use this method to mark rooms/paint over with ome 
-        //big buton/Jpanel
+        
+        for(int i = 0; i<6; i++){
+            for(int j = 0; i<4; j++){
+                boardArray[i][j] = "Study";
+            }
+        }
+        
+       
+        
+//big buton/Jpanel
 //        to print board
 //        for (int i = 0; i < grid.length; i++) {
 //			System.out.print(i);
@@ -50,6 +58,7 @@ public class GameBoard implements ActionListener{
     public void accuse(){
         //make accusations
         //player will need to choose the cards either before or at this step
+        //show a frame with 3 lists, after choosing, then press enter
     }
     
     public void checkAccusation(){
@@ -78,11 +87,12 @@ public class GameBoard implements ActionListener{
     
     public void nextTurn(){
         //give control to next player
-        //show next player information, remove current player information
+        //show next player information, store and remove current player information
     }
     
     public void rollDice(){
         //done, just call from Dice class
+        //when the button is pressed, this method will be called.
     }
     
     public void chooseSaveGameOrNot(){
