@@ -31,6 +31,9 @@ public class GameBoard implements ActionListener{
     GameBoard(){
         createBoard();
         print();
+        playerInput();
+        movePiece();
+        print();
     }
     
     public final void createBoard(){
@@ -67,6 +70,15 @@ public class GameBoard implements ActionListener{
 
 		}
         }
+       
+    public void movePiece(){
+        //temp method
+        int a = input1;
+        int b = input2;
+        
+        boardArray[input2][input1] = " A ";
+        
+    }
     
     public void playerInput(){
         Scanner s = new Scanner(System.in);
