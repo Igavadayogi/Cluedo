@@ -98,7 +98,7 @@ public class GameBoard implements ActionListener{
         //if true that player wins
       
         //get from envelope
-        //if accuse cards = envelope card then win
+        //if accuse cards = envelope card then call win emthod
         //otheriwse game continues
     }
     
