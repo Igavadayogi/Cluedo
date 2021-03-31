@@ -11,6 +11,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -22,37 +23,55 @@ import javax.swing.border.LineBorder;
  */
 public class GameBoard implements ActionListener{
     
-    String [][] boardArray = new String [25][24];
+    String [][] boardArray = new String [24][25];
+    private int input1;
+    private int input2;
    
     
     GameBoard(){
         createBoard();
+        print();
     }
     
     public final void createBoard(){
-      
-        for(int i = 0; i< 25; i++){
+      //i is y
+      //j is x
+        for(int i = 0; i< 24; i++){
             for(int j = 0; j< 25; j++){
                 boardArray[i][j] = " _ ";
             }
         }
         
-        for(int i = 0; i<6; i++){
-            for(int j = 0; i<4; j++){
-                boardArray[i][j] = "Study";
-            }
+        boardArray[12][9] = "A";
+        boardArray[13][9] = "B";
+        boardArray[14][9] = "C";
+        boardArray[12][13] = "D";
+        boardArray[13][13] = "E";
+        boardArray[14][13] = "F";
+        
+//        for(int i = 0; i<6; i++){
+//            for(int j = 0; i<4; j++){
+//                boardArray[i][j] = "Study";
+//            }
+//        }
+    
+    }
+    
+       public final void print(){
+            //temp 
+            for (int i = 0; i <24; i++) {
+			for (int j = 0; j < 25; j++) {
+				System.out.print(" " + boardArray[i][j] + " ");
+			}
+			System.out.println();
+
+		}
         }
-        
-       
-        
-//big buton/Jpanel
-//        to print board
-//        for (int i = 0; i < grid.length; i++) {
-//			System.out.print(i);
-//			for (int j = 0; j < grid.length; j++) {
-//				System.out.print(" " + grid[i][j] + " ");
-//			}
-//			System.out.println();
+    
+    public void playerInput(){
+        Scanner s = new Scanner(System.in);
+        input1 = s.nextInt(); //inputs for y-x coordinates 
+	input2 = s.nextInt();
         
     }
     public void accuse(){
@@ -78,11 +97,13 @@ public class GameBoard implements ActionListener{
     public void movePlayer(){
         //click on board, if exceed diceroll display error message
         //if diagonal display error
+        
+        //get the x-y coordinates from player input method
     }
     
     public void checkMove(){
         //check with dice and if diagnal(compare with board coordinates
-        //diplay error when player move into room without using the door
+        //diplay error when player move into room without using the door  
     }
     
     public void nextTurn(){
