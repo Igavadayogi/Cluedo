@@ -42,12 +42,12 @@ public class GameBoard implements ActionListener{
             }
         }
         
-        boardArray[12][9] = "A";
-        boardArray[13][9] = "B";
-        boardArray[14][9] = "C";
-        boardArray[12][13] = "D";
-        boardArray[13][13] = "E";
-        boardArray[14][13] = "F";
+        boardArray[12][9] = " A ";
+        boardArray[13][9] = " B ";
+        boardArray[14][9] = " C ";
+        boardArray[12][13] = " D ";
+        boardArray[13][13] = " E ";
+        boardArray[14][13] = " F ";
         
 //        for(int i = 0; i<6; i++){
 //            for(int j = 0; i<4; j++){
