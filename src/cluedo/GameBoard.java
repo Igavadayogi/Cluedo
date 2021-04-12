@@ -26,17 +26,21 @@ public class GameBoard implements ActionListener {
     String[][] boardArray = new String[24][25];
     private int input1;
     private int input2;
+    Player player1 = new Player("Miss Scarlett");
+    Player player2 = new Player("Rev Green");
+    Player player3 = new Player("Colonel Mustard");
+    Player player4 = new Player("Professor Plum");
+    Player player5 = new Player("Mrs. Peacock");
+    Player player6 = new Player("Mr. White");
 
     GameBoard() {
-        
         createBoard();
         print();
         run();
     }
 
     public void run() {
-       //Dice dice = new Dice();
-        
+
         while (true) {
             rollDice();
             playerInput();
@@ -79,7 +83,12 @@ public class GameBoard implements ActionListener {
 
         }
     }
-
+    
+//  something like this to get coordinate of players
+//    public void showPlayerLocation(playerNumber){
+//        playerNumber.getXCoord(); 
+//    }
+    
     public void movePiece() {
         //temp method
         int a = input1;
@@ -136,8 +145,8 @@ public class GameBoard implements ActionListener {
     public static void rollDice() {
         //done, just call from Dice class
         //when the button is pressed, this method will be called.
-       Dice dice = new Dice();
-       System.out.println("Dice result:" + dice.getDice2() + "," + dice.getDice1());
+        Dice dice = new Dice();
+        System.out.println("Dice result:" + dice.getDice2() + "," + dice.getDice1());
     }
 
     public void chooseSaveGameOrNot() {

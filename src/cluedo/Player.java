@@ -14,8 +14,11 @@ public class Player {
     private int xCoord;
     private int yCoord;
     
-    Player(String name){
-        this.name = name;
+
+
+    Player(String name) {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      this.name = name;
     }
     
     String getName(){
