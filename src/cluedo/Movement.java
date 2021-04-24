@@ -12,4 +12,6 @@ package cluedo;
  */
 public class Movement {
     
+    
+    
 }
