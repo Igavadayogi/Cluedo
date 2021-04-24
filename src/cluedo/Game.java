@@ -16,9 +16,9 @@ import java.util.Scanner;
  */
 public class Game implements ActionListener {
 
-    String[][] boardArray = new String[24][25];
-    private int input1;
-    private int input2;
+//    String[][] boardArray = new String[24][25];
+//    private int input1;
+//    private int input2;
     
 //    Player player1 = new Player("Miss Scarlett");
 //    Player player2 = new Player("Rev Green");
@@ -27,78 +27,83 @@ public class Game implements ActionListener {
 //    Player player5 = new Player("Mrs. Peacock");
 //    Player player6 = new Player("Mr. White");
 
-    Game() {
-        createBoard();
-        print();
-        run();
-    }
+//    Game() {
+//        createBoard();
+//        print();
+//        run();
+//    }
+    private void init(){
+        
+    } 
+    
+    
 
-    public void run() { //this part is temporary
-
-        while (true) {
-            rollDice();
-            playerInput();
-            movePiece();
-            print();
-        }
-    }
+//    public void run() { //this part is temporary
+//
+//        while (true) {
+//            rollDice();
+//            playerInput();
+//            movePiece();
+//            print();
+//        }
+//    }
 
     //will move these to the new board class
-    public final void createBoard() {
-        //i is y
-        //j is x
-        System.out.println("  0    1    2    3    4    5    6    7    8    9    10   11   12   13   14    15   16   17   18   19   20  21  22  23  24   25");//temp for testing
-        for (int i = 0; i < 24; i++) {
-            for (int j = 0; j < 25; j++) {
-                boardArray[i][j] = " _ ";
-            }
-        }
-
-        boardArray[12][9] = " A ";
-        boardArray[13][9] = " B ";
-        boardArray[14][9] = " C ";
-        boardArray[12][13] = " D ";
-        boardArray[13][13] = " E ";
-        boardArray[14][13] = " F ";
-
-//        for(int i = 0; i<6; i++){
-//            for(int j = 0; i<4; j++){
-//                boardArray[i][j] = "Study";
+//    public final void createBoard() {
+//        //i is y
+//        //j is x
+//        System.out.println("  0    1    2    3    4    5    6    7    8    9    10   11   12   13   14    15   16   17   18   19   20  21  22  23  24   25");//temp for testing
+//        for (int i = 0; i < 24; i++) {
+//            for (int j = 0; j < 25; j++) {
+//                boardArray[i][j] = " _ ";
 //            }
 //        }
-    }
+//
+//        boardArray[12][9] = " A ";
+//        boardArray[13][9] = " B ";
+//        boardArray[14][9] = " C ";
+//        boardArray[12][13] = " D ";
+//        boardArray[13][13] = " E ";
+//        boardArray[14][13] = " F ";
+//
+////        for(int i = 0; i<6; i++){
+////            for(int j = 0; i<4; j++){
+////                boardArray[i][j] = "Study";
+////            }
+////        }
+//    }
 
-    public final void print() {
-        //temp 
-        for (int i = 0; i < 24; i++) {
-            for (int j = 0; j < 25; j++) {
-                System.out.print(" " + boardArray[i][j] + " ");
-            }
-            System.out.println();
-
-        }
-    }
+//    public final void print() {
+//        //temp 
+//        for (int i = 0; i < 24; i++) {
+//            for (int j = 0; j < 25; j++) {
+//                System.out.print(" " + boardArray[i][j] + " ");
+//            }
+//            System.out.println();
+//
+//        }
+//    }
     
 //  something like this to get coordinate of players
 //    public void showPlayerLocation(playerNumber){
 //        playerNumber.getXCoord(); 
 //    }
     
-    public void movePiece() {
-        //temp method
-        int a = input1;
-        int b = input2;
+//    public void movePiece() {
+//        //temp method
+//        int a = input1;
+//        int b = input2;
+//
+//        boardArray[input2][input1] = " A ";
+//
+//    }
 
-        boardArray[input2][input1] = " A ";
-
-    }
-
-    public void playerInput() {
-        Scanner s = new Scanner(System.in);
-        input1 = s.nextInt(); //inputs for y-x coordinates 
-        input2 = s.nextInt();
-
-    }
+//    public void playerInput() {
+//        Scanner s = new Scanner(System.in);
+//        input1 = s.nextInt(); //inputs for y-x coordinates 
+//        input2 = s.nextInt();
+//
+//    }
 
     public void accuse() {
         //make accusations
