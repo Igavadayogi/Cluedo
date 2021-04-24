@@ -10,7 +10,7 @@ package cluedo;
  * @author user
  */
 public abstract class Player {
-    public boolean humanplayer;
+    public boolean humanPlayer;
     public String name;
     private int xCoord;
     private int yCoord;
@@ -26,4 +26,4 @@ public abstract class Player {
     int getYCoord(){
         return yCoord;
     }
-}    
+}

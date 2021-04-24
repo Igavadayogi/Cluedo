@@ -11,9 +11,10 @@ import java.util.ArrayList;
  *
  * @author user
  */
-public class AIPlayer {
+public class AIPlayer extends Player{
     
-    public AIPlayer (){
+    public AIPlayer (String name){
+        this.humanPlayer = false;
         this.action = new ArrayList<>();
         action chooseAction  = action.get((int)(Math.random() * ((3-1)+1))+1);//use RNG to pick one action
     }
