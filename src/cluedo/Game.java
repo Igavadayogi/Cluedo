@@ -19,12 +19,13 @@ public class Game implements ActionListener {
     String[][] boardArray = new String[24][25];
     private int input1;
     private int input2;
-    Player player1 = new Player("Miss Scarlett");
-    Player player2 = new Player("Rev Green");
-    Player player3 = new Player("Colonel Mustard");
-    Player player4 = new Player("Professor Plum");
-    Player player5 = new Player("Mrs. Peacock");
-    Player player6 = new Player("Mr. White");
+    
+//    Player player1 = new Player("Miss Scarlett");
+//    Player player2 = new Player("Rev Green");
+//    Player player3 = new Player("Colonel Mustard");
+//    Player player4 = new Player("Professor Plum");
+//    Player player5 = new Player("Mrs. Peacock");
+//    Player player6 = new Player("Mr. White");
 
     Game() {
         createBoard();
