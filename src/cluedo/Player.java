@@ -9,19 +9,13 @@ package cluedo;
  *  player objects
  * @author user
  */
-public class Player {
-    private String name;
+public abstract class Player {
+    public boolean humanplayer;
+    public String name;
     private int xCoord;
     private int yCoord;
     
-
-
-    Player(String name) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-      this.name = name;
-    }
-    
-    String getName(){
+    public String getName(){
         return name;
     }
     
@@ -32,5 +26,4 @@ public class Player {
     int getYCoord(){
         return yCoord;
     }
-}
-
+}    
