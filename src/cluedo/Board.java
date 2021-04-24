@@ -21,6 +21,7 @@ public class Board {
 
     public Tiles getboardArray(int x, int y) throws Exception {
 
+        //this part may not need to look less suspicious
         if (x < 0 || x > 25 || y < 0 || y > 24) {
 
             throw new Exception("Player out of bound!!");

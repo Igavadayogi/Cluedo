@@ -8,7 +8,7 @@ package cluedo;
 /**
  * may not be needed 
  * Class to track movement of the player
- * @author user
+ * @author Sze Yuen Kwok
  */
 public class Movement {
     private Player player;

@@ -8,7 +8,7 @@ package cluedo;
 /**
  * NOT SURE ABOUT THIS ATM Each tile is one block on the board
  *
- * @author user
+ * @author Sze Yuen Kwok
  */
 public class Tiles {
 
@@ -17,24 +17,24 @@ public class Tiles {
     private int y;
 
     public Tiles(int x, int y, Tokens token) {
-        this.setX(x);
-        this.setY(y);
+        this.setXPos(x);
+        this.setYPos(y);
         this.setToken(token);
     }
 
-    public int getX() {
+    public int getXPos() {
         return this.x;
     }
     
-    public void setX(int x) {
+    public void setXPos(int x) {
         this.x = x;
     }
 
-    public int getY() {
+    public int getYPos() {
         return this.y;
     }
     
-     public void setY(int y) {
+     public void setYPos(int y) {
         this.y = y;
     }
 

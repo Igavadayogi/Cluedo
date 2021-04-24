@@ -14,14 +14,14 @@ int dice1;
 int dice2;
   
   public Dice(){
-        dice1 = (int)(Math.random() * (7-1) + 1);
-        dice2 = (int)(Math.random() * (7-1) + 1);
+        this.dice1 = (int)(Math.random() * (7-1) + 1);
+        this.dice2 = (int)(Math.random() * (7-1) + 1);
   }
 
   public  int getDice1(){
-      return dice1;
+      return this.dice1;
   }
   public  int getDice2(){
-      return dice2;
+      return this.dice2;
   }
 }
