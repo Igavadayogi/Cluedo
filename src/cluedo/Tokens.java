@@ -11,6 +11,9 @@ package cluedo;
  */
 
 
-public class Tokens {
+public abstract class Tokens {
+    public Tokens(){
+        
+    }
     
 }

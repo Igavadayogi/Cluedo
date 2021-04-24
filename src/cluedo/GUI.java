@@ -19,11 +19,11 @@ import javax.swing.WindowConstants;
  */
 public class GUI {
 
-    GameBoard newGame;
+    Game newGame;
     JFrame frame;
 
     public GUI(){
-        newGame = new GameBoard();
+        newGame = new Game();
     }
     
     public void init(){

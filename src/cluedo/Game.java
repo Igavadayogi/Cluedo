@@ -5,23 +5,16 @@
  */
 package cluedo;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GridLayout;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 
 /**
  *
+ * This class handles all the functions of the game
  * @author user
  */
-public class GameBoard implements ActionListener {
+public class Game implements ActionListener {
 
     String[][] boardArray = new String[24][25];
     private int input1;
@@ -33,13 +26,13 @@ public class GameBoard implements ActionListener {
     Player player5 = new Player("Mrs. Peacock");
     Player player6 = new Player("Mr. White");
 
-    GameBoard() {
+    Game() {
         createBoard();
         print();
         run();
     }
 
-    public void run() {
+    public void run() { //this part is temporary
 
         while (true) {
             rollDice();
@@ -49,6 +42,7 @@ public class GameBoard implements ActionListener {
         }
     }
 
+    //will move these to the new board class
     public final void createBoard() {
         //i is y
         //j is x
