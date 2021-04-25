@@ -39,8 +39,8 @@ public class Board {
 //        boardArray[13][13] = new Tiles(13, 13, new MrsPeacock())
 //        boardArray[13][14] = new Tiles(13, 14, new MrWhite())
 
-        for (int i = 2; i < 6; i++) {
-            for (int j = 0; j < 8; j++) {
+        for (int i = 0; i < 24; i++) {
+            for (int j = 0; j < 23; j++) {
                 boardArray[i][j] = new Tiles(i, j, null);
             }
         }
