@@ -200,9 +200,20 @@ public class Game implements ActionListener {
                 return false;
             }
             
-            if(){
-            
+            //commented because Ms Scarlett is not defined yet
+            /*
+            if(rootTokens.isMsScralett() != player.isMsScarlett){
+                return false;
             }
+            */
+            
+            //commented because canMove isn't implemented
+            //Or it's been implemented but idk 
+            /*
+            if(!rootTokens.canMove(board, move.getBegin(), move.getFinish)){
+                return false
+            }
+            */
         }
         
     }
