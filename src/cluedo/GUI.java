@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javafx.scene.layout.Border;
@@ -23,6 +24,7 @@ import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
+import javax.swing.border.LineBorder;
 
 /**
  *
@@ -38,7 +40,7 @@ public class GUI implements ActionListener {
     private String result;
 
     JPanel board;
-    private JButton[][] boardTiles = new JButton[25][24];
+    private JButton[][] boardTiles = new JButton[25][25];
 
 //    public GUI() {
 //        
@@ -63,11 +65,34 @@ public class GUI implements ActionListener {
         panel = new JPanel();
 //        createGameInterface();
         createGUI();
+//        guiTest();
         frame.add(panel);
         frame.pack();
         frame.setVisible(true);
 
     }
+    
+//    public void guiTest(){
+//        GridLayout layout = new GridLayout(3,2,5,5);
+////        panel.setLayout(layout);
+////        panel.add(new JButton("Roll Dice"));
+////        panel.add(new JButton("Suggest"));
+////        panel.add(new JButton("Accuse"));
+////        panel.add(new JButton("Show Cards"));
+//        
+//        panel.setLayout(new GridLayout(6, 6));
+//        JButton[][] buttons = new JButton[5][5];
+//        for (int i = 0; i < 5; i++) {
+//            for (int j = 0; j < 5; j++) {
+//                buttons[i][j] = new JButton("_");
+//                panel.add(buttons[i][j], 5 * i + j);
+//            }
+//        }
+//        
+//
+//    }
+    
+    
 
     public void createGUI() {
 
@@ -98,24 +123,33 @@ public class GUI implements ActionListener {
             }
         });
 
-    }
+        board = new JPanel(new GridLayout(0, 25));
+        board.setBorder(new LineBorder(Color.BLACK));
+        panel.add(board);
+
+        Insets margin = new Insets(1, 1, 1, 1);
+        for (int i = 0; i < boardTiles.length; i++) {
+            for (int j = 0; j < boardTiles[i].length; j++) {
+                JButton b = new JButton();
+                b.setMargin(margin);
+                b.setBackground(Color.yellow);
+                boardTiles[j][i] = b;
+            }
+        }
+
+//        for(int i = 0; i<25;i++){
+//            board.add(new Jlabel)
+//        }
+        
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
+    }
 
-//    public void createGameInterface(){
-//        JMenuBar m = new JMenuBar();
-//        frame.setJMenuBar(m);
-//        JMenu options = new JMenu("Options");
-//        JMenuItem aboutItem = new JMenuItem("Roll Dice");
-//        JMenuItem aboutItem = new JMenuItem("Suggest");
-//        JMenuItem aboutItem = new JMenuItem("Accuse");
-//        JMenuItem aboutItem = new JMenuItem("Quit");
-//    }
-//    private final JPanel gui = new JPanel(new BorderLayout(2, 2));
-//    private JButton[][] boardTiles = new JButton[25][24];
-//    private JPanel board;
+    
+
+
+
 
