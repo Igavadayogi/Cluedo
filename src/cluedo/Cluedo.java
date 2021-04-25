@@ -22,10 +22,14 @@ public class Cluedo {
         System.out.println("Press 1 to Start");
         System.out.println("Press 0 to Exit");
         System.out.println("");
-
+        
         Scanner s = new Scanner(System.in);
         String input = s.nextLine();
-
+        
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        
+        /*
         switch (input) {
             case "1":
                 Game game = new Game();
@@ -38,7 +42,7 @@ public class Cluedo {
                 System.out.println("Command not recognised");
                 break;
         }
-
+        */
     }
 
 }
