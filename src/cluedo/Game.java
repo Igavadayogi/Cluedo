@@ -16,12 +16,12 @@ import java.util.Scanner;
  */
 public class Game implements ActionListener {
     
-    private Player player;
-    private Tiles begin;
-    private Tiles finish;
-    private Tokens movedTokens;
-    private Tokens killedTokens;
-    private boolean tokensMove = false;
+    private Player[] player;
+    private Board board;
+    private Player presentTurn;
+    private gameCondition Condition;
+    private List<Moves> movesDone;
+    
 //    String[][] boardArray = new String[24][25];
 //    private int input1;
 //    private int input2;
@@ -168,23 +168,14 @@ public class Game implements ActionListener {
         //load from text file, use file reader
     }
 
-    public void move(){
+    public void commenceMove(){
+        
         //Move the player
-        this.player = player;
-        this.begin = begin;
-        this.finish = finish;
-        this.movedTokens = begin.getToken();
-    }
-    
-    public boolean isTokenMove(){
-    
-        return this.tokensMove;
-    
-    }
-    
-    public void setTokenMove(){
-    
-        this.tokensMove = tokensMove;
+        players[1] = p1;
+        
+        board.restoreBoard();
+        
+        
         
     }
             

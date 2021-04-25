@@ -15,7 +15,7 @@ public class Board {
 
     public Board() {
 
-        this.createBoard();
+        this.restoreBoard();
 
     }
 
@@ -29,7 +29,7 @@ public class Board {
         return boardArray[x][y];
     }
 
-    public void createBoard() {
+    public void restoreBoard() {
 
         //commented out for now because abstract classes for the tokens are not completed
 //        boardArray[9][12] =  new Tiles(9, 12, new MsScarlett());
