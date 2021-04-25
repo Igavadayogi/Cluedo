@@ -15,7 +15,13 @@ import java.util.Scanner;
  * @author user
  */
 public class Game implements ActionListener {
-
+    
+    private Player player;
+    private Tiles begin;
+    private Tiles finish;
+    private Tokens movedTokens;
+    private Tokens killedTokens;
+    private boolean tokensMove = false;
 //    String[][] boardArray = new String[24][25];
 //    private int input1;
 //    private int input2;
@@ -131,7 +137,7 @@ public class Game implements ActionListener {
 
         //get the x-y coordinates from player input method
     }
-
+    
     public void checkMove() {
         //check with dice and if diagnal(compare with board coordinates
         //diplay error when player move into room without using the door  
@@ -162,6 +168,26 @@ public class Game implements ActionListener {
         //load from text file, use file reader
     }
 
+    public void move(){
+        //Move the player
+        this.player = player;
+        this.begin = begin;
+        this.finish = finish;
+        this.movedTokens = begin.getToken();
+    }
+    
+    public boolean isTokenMove(){
+    
+        return this.tokensMove;
+    
+    }
+    
+    public void setTokenMove(){
+    
+        this.tokensMove = tokensMove;
+        
+    }
+            
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
