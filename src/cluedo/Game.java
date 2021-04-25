@@ -20,8 +20,7 @@ public class Game implements ActionListener {
     private Player[] player;
     private Board board;
     private Player presentTurn;
-    private gameCondition Condition;
-    private List<Movement> movesDone;
+
     
 //    String[][] boardArray = new String[24][25];
 //    private int input1;
@@ -169,17 +168,33 @@ public class Game implements ActionListener {
         //load from text file, use file reader
     }
 
-    public void commenceMove(){
+    public void commenceMove(Player user1){
         
         //Move the player
-        players[1] = p1;
+        player[1] = user1;
         
         board.restoreBoard();
         
+        /*
+        if(user1.isMsScarlett()){
+            this.presentTurn = user1;
+        }
+        */
         
+        public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finish Y){
         
-    }
+            Tiles beginBA = board.getboardArray(beginX, finishY);
+            Tiles finishBA = board.getboardArray(beginY, finishY);
             
+        }
+        
+        /*
+        public boolean makeMove(){
+        
+        }
+        */
+    }
+           
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
