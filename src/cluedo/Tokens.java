@@ -11,9 +11,21 @@ package cluedo;
  */
 
 
+//not sure what to put in this class
 public abstract class Tokens {
+    
+    private boolean inRoom = false;
+    
     public Tokens(){
         
+    }
+    
+    public boolean inRoomOrNot(){
+        return this.inRoom;
+    }
+    
+    public void setInRoomOrNot(boolean inRoom){
+        this.inRoom = inRoom;
     }
     
 }

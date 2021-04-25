@@ -21,6 +21,18 @@ public class Tiles {
         this.setYPos(y);
         this.setToken(token);
     }
+    
+    
+    //may be not needed, incomplete
+    public boolean isWall(){
+        return false;
+    }
+    
+    //incomplete
+    public boolean occupied(Tokens token){
+        //if token is already on tile, this tile is not available
+        return false;
+    }
 
     public int getXPos() {
         return this.x;
@@ -42,8 +54,8 @@ public class Tiles {
         return this.token;
     }
 
-    public void setToken(Tokens token) {
-        this.token = token;
+    public void setToken(Tokens tkn) {
+        this.token = tkn;
     }
 
 }
