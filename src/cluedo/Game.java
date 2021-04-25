@@ -7,6 +7,7 @@ package cluedo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -20,7 +21,7 @@ public class Game implements ActionListener {
     private Board board;
     private Player presentTurn;
     private gameCondition Condition;
-    private List<Moves> movesDone;
+    private List<Movement> movesDone;
     
 //    String[][] boardArray = new String[24][25];
 //    private int input1;
