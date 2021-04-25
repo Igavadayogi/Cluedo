@@ -141,7 +141,7 @@ public class GUI implements ActionListener {
 //            board.add(new Jlabel)
 //        }
         
-
+    }
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
