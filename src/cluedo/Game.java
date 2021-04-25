@@ -185,14 +185,26 @@ public class Game implements ActionListener {
         
             Tiles beginBA = board.getboardArray(beginX, finishY);
             Tiles finishBA = board.getboardArray(beginY, finishY);
+            Movement move = new Movement(player, beginBA, finishBA);
+            //return this.createMove(move, player);
+        }
+        
+        public boolean createMove(Movement move, Player player){
             
+            Tokens rootTokens = move.getBegin().getTokens();
+            if(rootTokens == null){
+                return false;
+            }
+            
+            if(player != presentTurn){
+                return false;
+            }
+            
+            if(){
+            
+            }
         }
         
-        /*
-        public boolean makeMove(){
-        
-        }
-        */
     }
            
     @Override
