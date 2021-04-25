@@ -107,7 +107,7 @@ public class Game implements ActionListener {
         */
     }
     
-    
+     
         //move by replacing
     public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finishY) throws Exception{
         Tiles beginBA = board.getboardArray(beginX, finishY);
