@@ -107,42 +107,53 @@ public class Game implements ActionListener {
         */
     }
     
+    
         //move by replacing
-//        public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finishY) throws Exception{
-//        
-//            Tiles beginBA = board.getboardArray(beginX, finishY);
-//            Tiles finishBA = board.getboardArray(beginY, finishY);
-//            Movement move = new Movement(player, beginBA, finishBA);
-//            return this.createMove(move, player);
-//        
-//        }
-//        
-//        public boolean createMove(Movement move, Player player){
-//            
-//            Tokens rootTokens = move.getStart().getTokens();
-//            if(rootTokens == null){
-//                return false;
-//            }
-//            
-//            if(player != presentTurn){
-//                return false;
-//            }
-//            
-//            //commented because Ms Scarlett is not defined yet
-//            /*
-//            if(rootTokens.isMsScralett() != player.isMsScarlett){
-//                return false;
-//            }
-//            */
-//            
-//            //commented because canMove isn't implemented
-//            //Or it's been implemented but idk 
-//            /*
-//            if(!rootTokens.canMove(board, move.getBegin(), move.getFinish)){
-//                return false
-//            }
-//            */
-//        }
+    public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finishY) throws Exception{
+        Tiles beginBA = board.getboardArray(beginX, finishY);
+        Tiles finishBA = board.getboardArray(beginY, finishY);
+        Movement move = new Movement(player, beginBA, finishBA);
+        return this.createMove(move, player);
+        
+    }
+    public boolean createMove(Movement move, Player player){
+        Tokens rootTokens = move.getBegin().getTokens();
+        if(rootTokens == null){
+            return false;
+        }
+        
+        if(player != presentTurn){
+            return false;
+        }
+            
+        //commented because Ms Scarlett is not defined yet
+        /*
+        if(rootTokens.isMsScralett() != player.isMsScarlett){
+            return false;
+        }
+        */
+            
+        //commented because canMove isn't implemented
+        //Or it's been implemented but idk 
+        //Checking if the the move is valid
+        /*
+        if(!rootTokens.canMove(board, move.getBegin(), move.getFinish)){
+            return false
+        }
+        */
+        
+        //moving the player from begin to finish position 
+        Tokens tokenDest = move.getBegin().getTokens();
+        move.getFinish().setTokens(move.getBegin().getToken());
+        move.getBegin.setTokens();
+        
+        /*
+        if(tokenDest != null && rootToken instanceof ){
+        
+        }
+        */
+        
+        }
         
     
            
