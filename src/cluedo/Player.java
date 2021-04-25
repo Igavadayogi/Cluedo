@@ -19,11 +19,15 @@ public abstract class Player {
         return name;
     }
     
-    int getXCoord(){
+    public void setName(){
+        this.name = name;
+    }
+    
+    public int getXCoord(){
         return xCoord;
     }
     
-    int getYCoord(){
+    public int getYCoord(){
         return yCoord;
     }
 }
