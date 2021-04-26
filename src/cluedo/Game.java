@@ -21,19 +21,34 @@ public class Game implements ActionListener {
     private Player[] player;
     public Board board;
     private Player presentTurn;
-    
+    Cards cards;
+    private String namePicked;
+    private String roomPicked;
+    private String weaponPicked;
 
     private void init() {
 
     }
 
-    public void accuse() {
+    public void accuse(Player player) {
         //make accusations
         //player will need to choose the cards either before or at this step
         //show a frame with 3 lists, after choosing, then press enter
+        System.out.println("Please input accuse choices in the following order: name, room, weapon");
+        System.out.println("Here are the options: ");
+        System.out.println("Miss Scarlett, Rev Green, Colonel Mustard, Professor Plum, Mrs. Peacock, Mr. White");
+        System.out.println("Candlestick, Dagger, Lead Pipe, Revolver, Rope, Wrench");
+
+        Scanner s1 = new Scanner(System.in);
+        namePicked = s1.nextLine();
+        roomPicked = s1.nextLine();
+        weaponPicked = s1.nextLine();
+
+        checkAccusation(player);
+
     }
 
-    public void checkAccusation() {
+    public void checkAccusation(Player player) {
         //check if the player's accusation matches with the envelope
         //get contents of the envelope and compare
         //if true that player wins
@@ -41,17 +56,28 @@ public class Game implements ActionListener {
         //get from envelope
         //if accuse cards = envelope card then call win emthod
         //otheriwse game continues
+        if (namePicked == cards.getPlayer() && roomPicked == cards.getRoom() && weaponPicked == cards.getWeapon()) {
+            win();
+        } else {
+            System.out.println("Incorrect." + player + "has lose.");
+        }
+
     }
+    
 
     public void win() {
         //display win message, end game
+        System.out.println("Congradulations, you have won!");
     }
 
     public void movePlayer() {
         //click on board, if exceed diceroll display error message
         //if diagonal display error
-
         //get the x-y coordinates from player input method
+        
+        
+        
+        
     }
 
     public void checkMove() {
@@ -70,7 +96,6 @@ public class Game implements ActionListener {
         String result2 = Integer.toString(dice.getDice2());
         return result1 + result2;
     }
-
 
     public void chooseSaveGameOrNot() {
         //shows when exiting the game
