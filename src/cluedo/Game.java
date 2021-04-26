@@ -32,14 +32,16 @@ public class Game implements ActionListener {
     Cards cards;
     Tokens token;
 
-    private void init(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
-        player[0] = player1;
-        player[1] = player2;
-        player[2] = player3;
-        player[3] = player4;
-        player[4] = player4;
-        player[5] = player6;
+    public void init() throws Exception {
 
+        //init player objects
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player player4 = new Player();
+        Player player5 = new Player();
+        Player player6 = new Player();
+        
         player1.setName("Miss Scarlett");
         //  player1.setTokens(msScarlett);
         player2.setName("Rev Green");
@@ -48,17 +50,25 @@ public class Game implements ActionListener {
         player5.setName("Mrs. Peacock");
         player6.setName("Mr. White");
 
+//        player[0] = player1;
+//        player[1] = player2;
+//        player[2] = player3;
+//        player[3] = player4;
+//        player[4] = player4;
+//        player[5] = player6;
+
+        
+
+        //init board object
+        board = new Board();
         board.createBoard();
         
-        
+        start();
 
     }
 
     public void start() throws Exception {
-        
-        
-        
-        
+
         while (true) {
             System.out.println("Make your move");
             System.out.println("1.Roll Dice");
@@ -67,25 +77,27 @@ public class Game implements ActionListener {
             System.out.println("4.Move");
             Scanner s = new Scanner(System.in);
             String option = s.nextLine();
-            if (null != option) switch (option) {
-                case "1":
-                    rollDice();
-                    break;
-                case "2":
-                    
-                    break;
-                case "3":
-                   // accuse();
-                    break;
-                case "4":
-                    System.out.println("Please input new coordinates");
-                    Scanner s2 = new Scanner(System.in);
-                    int x = s2.nextInt();
-                    int y = s2.nextInt();
-                    movePlayer(presentTurn, presentTurn.getToken(), x, y);
-                    break;
-                default:
-                    break;
+            if (null != option) {
+                switch (option) {
+                    case "1":
+                        rollDice();
+                        break;
+                    case "2":
+
+                        break;
+                    case "3":
+                        // accuse();
+                        break;
+                    case "4":
+                        System.out.println("Please input new coordinates");
+                        Scanner s2 = new Scanner(System.in);
+                        int x = s2.nextInt();
+                        int y = s2.nextInt();
+                        movePlayer(presentTurn, presentTurn.getToken(), x, y);
+                        break;
+                    default:
+                        break;
+                }
             }
 
         }

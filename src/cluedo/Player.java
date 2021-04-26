@@ -10,7 +10,7 @@ package cluedo;
  *
  * @author user
  */
-public abstract class Player {
+public class Player {
 
     public boolean humanPlayer;
     public String name;

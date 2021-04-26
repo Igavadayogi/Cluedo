@@ -31,18 +31,18 @@ public class Board {
 
     public void createBoard() {
 
-        boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
-        boardArray[9][13] = new Tiles(9, 13, new RevGreen());
-        boardArray[9][14] = new Tiles(9, 14, new ColMustard());
-        boardArray[13][12] = new Tiles(13, 12, new ProfPlum());
-        boardArray[13][13] = new Tiles(13, 13, new MrsPeacock());
-        boardArray[13][14] = new Tiles(13, 14, new MrWhite());
-
         for (int i = 0; i < 25; i++) {
             for (int j = 0; j < 24; j++) {
                 boardArray[i][j] = new Tiles(i, j, null);
 
             }
         }
+        
+                boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
+        boardArray[9][13] = new Tiles(9, 13, new RevGreen());
+        boardArray[9][14] = new Tiles(9, 14, new ColMustard());
+        boardArray[13][12] = new Tiles(13, 12, new ProfPlum());
+        boardArray[13][13] = new Tiles(13, 13, new MrsPeacock());
+        boardArray[13][14] = new Tiles(13, 14, new MrWhite());
     }
 }

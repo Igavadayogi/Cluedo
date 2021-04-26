@@ -16,10 +16,12 @@ public class Cluedo {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        Menu menu = new Menu();
-        menu.setVisible(true);
+//        Menu menu = new Menu();
+//        menu.setVisible(true);
+        Game g = new Game();
+        g.init();
     }
 
 }
