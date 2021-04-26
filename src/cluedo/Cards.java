@@ -14,7 +14,7 @@ public class Cards {
         String peacock = "Mrs. Peacock";
         String white  = "Mr. White";
         
-         String[] players = new String[] {"Miss Scarlett", "Rev Green", "Colonel Mustard",
+         String[] character = new String[] {"Miss Scarlett", "Rev Green", "Colonel Mustard",
         "Professor Plum", "Mrs. Peacock", "Mr. White"};
     //}
    // public class roomCards {
@@ -26,7 +26,7 @@ public class Cards {
         String library = "Library";
         String lounge = "Lounge";
         String hall = "Hall";
-        String strudy = "Study";
+        String study = "Study";
         
   String rooms[] = new String[] {"Kitchen","Ballroom","Conservatory", "Dinning Room","Billard Room",
         "Library","Lounge", "Hall", "Study"};
@@ -47,7 +47,7 @@ public class Cards {
         //choose 1 randomly from each class, fo a total of 3 cards,
         //put in array/assign numbe then use random number generator to determine
        
-        String chosenCharacter = players[(int)(Math.random() * (5-0) + 0)];
+        String chosenCharacter = character[(int)(Math.random() * (5-0) + 0)];
         String chosenRoom = rooms[(int)(Math.random() * (8-0) + 0)];
         String chosenWeapon = weapons[(int)(Math.random() * (5-0) + 0)];
     //}
