@@ -30,6 +30,7 @@ public class Board {
     }
 
     public void createBoard() {
+        boardArray = new Tiles[25][24];
 
         for (int i = 0; i < 25; i++) {
             for (int j = 0; j < 24; j++) {
@@ -37,8 +38,8 @@ public class Board {
 
             }
         }
-        
-                boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
+
+        boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
         boardArray[9][13] = new Tiles(9, 13, new RevGreen());
         boardArray[9][14] = new Tiles(9, 14, new ColMustard());
         boardArray[13][12] = new Tiles(13, 12, new ProfPlum());
