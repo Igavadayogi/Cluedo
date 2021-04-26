@@ -4,8 +4,6 @@ package cluedo;
  *
  * @author matth
  */
-import java.util.Queue;
-import java.util.ArrayList;
 
 public class Cards {
     //public class playerCards {

@@ -19,17 +19,42 @@ import java.util.Scanner;
 public class Game implements ActionListener {
 
     private Player[] player;
-    public Board board;
+
     private Player presentTurn;
-    Cards cards;
+
     private String namePicked;
     private String roomPicked;
     private String weaponPicked;
 
-    private void init() {
+    MsScarlett msScarlett;
+    
+    Board board;
+    Cards cards;
+    Tokens token;
 
+    private void init(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
+        player[0] = player1;
+        player[1] = player2;
+        player[2] = player3;
+        player[3] = player4;
+        player[4] = player4;
+        player[5] = player6;
+        
+        player1.setName("Miss Scarlett");
+      //  player1.setTokens(msScarlett);
+        player2.setName("Rev Green");
+        player3.setName("Colonel Mustard");
+        player4.setName("Professor Plum");
+        player5.setName("Mrs. Peacock");
+        player6.setName("Mr. White");
+        
+        board.createBoard();
+        
+        
+        
     }
-
+    
+    
     public void accuse(Player player) {
         //make accusations
         //player will need to choose the cards either before or at this step
@@ -56,28 +81,35 @@ public class Game implements ActionListener {
         //get from envelope
         //if accuse cards = envelope card then call win emthod
         //otheriwse game continues
-        if (namePicked == cards.getPlayer() && roomPicked == cards.getRoom() && weaponPicked == cards.getWeapon()) {
+        if (namePicked.equals(cards.getPlayer()) && roomPicked.equals(cards.getRoom()) && weaponPicked.equals(cards.getWeapon())) {
             win();
         } else {
             System.out.println("Incorrect." + player + "has lose.");
         }
 
     }
-    
 
     public void win() {
         //display win message, end game
         System.out.println("Congradulations, you have won!");
     }
 
-    public void movePlayer() {
+    //input player name, token, new coords
+    public void movePlayer(Player player, Tokens tkn, int newX, int newY) throws Exception {
         //click on board, if exceed diceroll display error message
         //if diagonal display error
         //get the x-y coordinates from player input method
-        
-        
-        
-        
+
+        //get players/tokens current pos in tile board
+        int oldX = player.getXCoord();
+        int oldY = player.getYCoord();
+
+        //old coord is replaced by empty tile
+        //new coord is replaced by player/token occupied tile
+        board.boardArray[oldX][oldY] = new Tiles(oldX, oldY, null);
+        board.boardArray[newX][newY] = new Tiles(newX, newY, tkn);
+
+        //Tiles newPos = board.boardArray[newX][newY];
     }
 
     public void checkMove() {
@@ -110,27 +142,26 @@ public class Game implements ActionListener {
         //load from text file, use file reader
     }
 
-    public void commenceMove(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
-
-        player[0] = player1;
-        player[1] = player2;
-        player[2] = player3;
-        player[3] = player4;
-        player[4] = player5;
-        player[5] = player6;
-
-        board.restoreBoard();
-
-        //temp for test
-        this.presentTurn = player1;
-
-        /*
-        if(user1.isMsScarlett()){
-            this.presentTurn = user1;
-        }
-         */
-    }
-
+//    public void commenceMove(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
+//
+//        player[0] = player1;
+//        player[1] = player2;
+//        player[2] = player3;
+//        player[3] = player4;
+//        player[4] = player5;
+//        player[5] = player6;
+//
+//        board.restoreBoard();
+//
+//        //temp for test
+//        this.presentTurn = player1;
+//
+//        /*
+//        if(user1.isMsScarlett()){
+//            this.presentTurn = user1;
+//        }
+//         */
+//    }
     //move by replacing
 //    public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finishY) throws Exception{
 //        Tiles beginBA = board.getboardArray(beginX, finishY);

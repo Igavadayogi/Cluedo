@@ -15,7 +15,7 @@ public class Board {
 
     public Board() {
 
-        this.restoreBoard();
+        this.createBoard();
 
     }
 
@@ -29,7 +29,7 @@ public class Board {
         return boardArray[x][y];
     }
 
-    public void restoreBoard() {
+    public void createBoard() {
 
         boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
         boardArray[9][13] = new Tiles(9, 13, new RevGreen());

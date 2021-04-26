@@ -6,28 +6,39 @@
 package cluedo;
 
 /**
- *  player objects
+ * player objects
+ *
  * @author user
  */
 public abstract class Player {
+
     public boolean humanPlayer;
     public String name;
     private int xCoord;
     private int yCoord;
-    
-    public String getName(){
+    Tokens tokenPicked;
+
+    public String getName() {
         return name;
     }
-    
-    public void setName(){
+
+    public void setName(String name) {
         this.name = name;
     }
-    
-    public int getXCoord(){
+    public void setToken(Tokens tokenPicked) {
+        this.tokenPicked = tokenPicked;
+    }
+
+    public int getXCoord() {
         return xCoord;
     }
-    
-    public int getYCoord(){
+
+    public int getYCoord() {
         return yCoord;
+    }
+
+    public Tokens getToken() {
+        return tokenPicked;
+
     }
 }
