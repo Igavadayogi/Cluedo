@@ -5,43 +5,38 @@
  */
 package cluedo;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javafx.scene.layout.Border;
-import static javafx.scene.paint.Color.color;
-import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 import javax.swing.JTextField;
-import javax.swing.JToolBar;
-import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 import javax.swing.border.LineBorder;
 
 /**
  *
- * @author user
+ * @author Sze Yuen Kwok
  */
 public class GUI implements ActionListener {
 
     Game game;
     JFrame frame;
-    JPanel panel;
+    JPanel mainPanel;
     private JTextField turn;
 
-
-    JPanel board;
+    JPanel boardPanel;
     private JButton[][] boardTiles = new JButton[25][25];
-
+    private JPanel rightToolPanel;
+    JButton rollButton;
+    private JSplitPane splitPane;
+    
 //    public GUI() {
 //        
 //        newGame = new Game();
@@ -49,6 +44,7 @@ public class GUI implements ActionListener {
 //        createGUI();
 ////        SwingUtilities.invokeLater((Runnable) g);
 //    }
+
     public void start() {
 
         game = new Game();
@@ -61,57 +57,37 @@ public class GUI implements ActionListener {
         frame = new JFrame("Cluedo");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(true);
-        Container pane = frame.getContentPane();
-        panel = new JPanel();
-//        createGameInterface();
+        //Container pane = frame.getContentPane();
+        mainPanel = new JPanel();
         createGUI();
-//        guiTest();
-        frame.add(panel);
+        frame.add(mainPanel);
         frame.pack();
         frame.setVisible(true);
 
     }
-    
-//    public void guiTest(){
-//        GridLayout layout = new GridLayout(3,2,5,5);
-////        panel.setLayout(layout);
-////        panel.add(new JButton("Roll Dice"));
-////        panel.add(new JButton("Suggest"));
-////        panel.add(new JButton("Accuse"));
-////        panel.add(new JButton("Show Cards"));
-//        
-//        panel.setLayout(new GridLayout(6, 6));
-//        JButton[][] buttons = new JButton[5][5];
-//        for (int i = 0; i < 5; i++) {
-//            for (int j = 0; j < 5; j++) {
-//                buttons[i][j] = new JButton("_");
-//                panel.add(buttons[i][j], 5 * i + j);
-//            }
-//        }
-//        
-//
-//    }
-    
-    
 
     public void createGUI() {
+        
+        rightToolPanel = new JPanel();
+        
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        JToolBar tool = new JToolBar();
-        tool.setFloatable(false);
-//        tools extra column for labels frame = new JFrame();
-        panel.add(tool);
-        JButton rollButton;
-        tool.add(rollButton = new JButton("Roll Dice"));
-        tool.addSeparator();
-        tool.add(new JButton("Suggest"));
-        tool.addSeparator();
-        tool.add(new JButton("Accuse"));
-        tool.addSeparator();
-        tool.add(new JButton("Show Cards"));
-        tool.addSeparator();
-        tool.add(new JLabel("Current turn: "));
-        tool.addSeparator();
-        tool.add(turn = new JTextField("       "));
+        frame.getContentPane().setLayout(new GridLayout());
+        frame.getContentPane().add(splitPane);
+        splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+        splitPane.setRightComponent(rightToolPanel);           
+        splitPane.setLeftComponent(boardPanel); 
+        
+
+        
+        GridLayout rightPanelLayout = new GridLayout(1, 1, 5, 5);
+        rightToolPanel.setLayout(rightPanelLayout);
+        rightToolPanel.add(rollButton = new JButton("Roll Dice"));
+        rightToolPanel.add(new JButton("Suggest"));
+        rightToolPanel.add(new JButton("Accuse"));
+        rightToolPanel.add(new JButton("Show Cards"));
 
         rollButton.addActionListener((ActionEvent ae) -> {
             String result = "Dice result: " + Game.rollDice();
@@ -119,9 +95,11 @@ public class GUI implements ActionListener {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         });
 
-        board = new JPanel(new GridLayout(0, 25));
-        board.setBorder(new LineBorder(Color.BLACK));
-        panel.add(board);
+        mainPanel.add(rightToolPanel);
+
+        boardPanel = new JPanel(new GridLayout(0, 25));
+        boardPanel.setBorder(new LineBorder(Color.BLACK));
+        mainPanel.add(boardPanel);
 
         Insets margin = new Insets(1, 1, 1, 1);
         for (int i = 0; i < boardTiles.length; i++) {
@@ -133,19 +111,10 @@ public class GUI implements ActionListener {
             }
         }
 
-//        for(int i = 0; i<25;i++){
-//            board.add(new Jlabel)
-//        }
-        
     }
+
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    }
-
-    
-
-
-
-
+}

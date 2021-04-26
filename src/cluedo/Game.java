@@ -7,6 +7,7 @@ package cluedo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,20 +36,21 @@ public class Game implements ActionListener {
     public void init() throws Exception {
 
         //init player objects
-//        Player player1 = new Player();
-//        Player player2 = new Player();
-//        Player player3 = new Player();
-//        Player player4 = new Player();
-//        Player player5 = new Player();
-//        Player player6 = new Player();
-//        
-//        player1.setName("Miss Scarlett");
-//        //  player1.setTokens(msScarlett);
-//        player2.setName("Rev Green");
-//        player3.setName("Colonel Mustard");
-//        player4.setName("Professor Plum");
-//        player5.setName("Mrs. Peacock");
-//        player6.setName("Mr. White");
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player player4 = new Player();
+        Player player5 = new Player();
+        Player player6 = new Player();
+        
+        player1.setName("Miss Scarlett");
+        //  player1.setTokens(msScarlett);
+        player2.setName("Rev Green");
+        player3.setName("Colonel Mustard");
+        player4.setName("Professor Plum");
+        player5.setName("Mrs. Peacock");
+        player6.setName("Mr. White");
+        
 //        player[0] = player1;
 //        player[1] = player2;
 //        player[2] = player3;
@@ -58,15 +60,20 @@ public class Game implements ActionListener {
         //init board object
         board = new Board();
         board.createBoard();
-
+        
         start();
 
     }
+    
 
+    
+
+  
+    
     public void start() throws Exception {
 
         while (true) {
-            System.out.println(board.boardArray[9][12]);
+            
 
             System.out.println("Make your move");
             System.out.println("1.Roll Dice");
