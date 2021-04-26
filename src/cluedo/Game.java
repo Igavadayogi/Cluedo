@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 public class Game implements ActionListener {
 
-    private Player[] player;
+    private Player[] playerArr;
 
     private Player presentTurn;
 
@@ -35,34 +35,30 @@ public class Game implements ActionListener {
     public void init() throws Exception {
 
         //init player objects
-        Player player1 = new Player();
-        Player player2 = new Player();
-        Player player3 = new Player();
-        Player player4 = new Player();
-        Player player5 = new Player();
-        Player player6 = new Player();
-        
-        player1.setName("Miss Scarlett");
-        //  player1.setTokens(msScarlett);
-        player2.setName("Rev Green");
-        player3.setName("Colonel Mustard");
-        player4.setName("Professor Plum");
-        player5.setName("Mrs. Peacock");
-        player6.setName("Mr. White");
-
+//        Player player1 = new Player();
+//        Player player2 = new Player();
+//        Player player3 = new Player();
+//        Player player4 = new Player();
+//        Player player5 = new Player();
+//        Player player6 = new Player();
+//        
+//        player1.setName("Miss Scarlett");
+//        //  player1.setTokens(msScarlett);
+//        player2.setName("Rev Green");
+//        player3.setName("Colonel Mustard");
+//        player4.setName("Professor Plum");
+//        player5.setName("Mrs. Peacock");
+//        player6.setName("Mr. White");
 //        player[0] = player1;
 //        player[1] = player2;
 //        player[2] = player3;
 //        player[3] = player4;
 //        player[4] = player4;
 //        player[5] = player6;
-
-        
-
         //init board object
         board = new Board();
         board.createBoard();
-        
+
         start();
 
     }
@@ -70,6 +66,8 @@ public class Game implements ActionListener {
     public void start() throws Exception {
 
         while (true) {
+            System.out.println(board.boardArray[9][12]);
+
             System.out.println("Make your move");
             System.out.println("1.Roll Dice");
             System.out.println("2.Suggest");
@@ -150,8 +148,8 @@ public class Game implements ActionListener {
         //get the x-y coordinates from player input method
 
         //get players/tokens current pos in tile board
-        int oldX = player.getXCoord();
-        int oldY = player.getYCoord();
+        int oldX = tkn.getXCoord();
+        int oldY = tkn.getYCoord();
 
         //old coord is replaced by empty tile
         //new coord is replaced by player/token occupied tile
@@ -171,12 +169,17 @@ public class Game implements ActionListener {
         //show next player information, store and remove current player information
     }
 
+    /**
+     *
+     * @return
+     */
     public static String rollDice() {
         Dice dice = new Dice();
         String result1 = Integer.toString(dice.getDice1());
         String result2 = Integer.toString(dice.getDice2());
+        String result = Integer.toString(dice.getDice1() + dice.getDice2());
         System.out.println("Dice results: " + result1 + ", " + result2);
-        return result1 + result2;
+        return result;
     }
 
     public void chooseSaveGameOrNot() {

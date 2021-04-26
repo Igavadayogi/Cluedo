@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
@@ -36,8 +37,7 @@ public class GUI implements ActionListener {
     JFrame frame;
     JPanel panel;
     private JTextField turn;
-    private JTextField rollResult;
-    private String result;
+
 
     JPanel board;
     private JButton[][] boardTiles = new JButton[25][25];
@@ -103,8 +103,6 @@ public class GUI implements ActionListener {
         JButton rollButton;
         tool.add(rollButton = new JButton("Roll Dice"));
         tool.addSeparator();
-        tool.add(new JTextField("    " + result + "    "));
-        tool.addSeparator();
         tool.add(new JButton("Suggest"));
         tool.addSeparator();
         tool.add(new JButton("Accuse"));
@@ -115,12 +113,10 @@ public class GUI implements ActionListener {
         tool.addSeparator();
         tool.add(turn = new JTextField("       "));
 
-        rollButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                result = game.rollDice();
-                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
+        rollButton.addActionListener((ActionEvent ae) -> {
+            String result = "Dice result: " + Game.rollDice();
+            JOptionPane.showMessageDialog(frame, result);
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         });
 
         board = new JPanel(new GridLayout(0, 25));

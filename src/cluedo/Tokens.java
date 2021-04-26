@@ -15,6 +15,8 @@ package cluedo;
 public abstract class Tokens {
     
     private boolean inRoom = false;
+    private int xCoord;
+    private int yCoord;
     
     public Tokens(){
         
@@ -28,5 +30,12 @@ public abstract class Tokens {
         this.inRoom = inRoom;
     }
     
+        public int getXCoord() {
+        return this.xCoord;
+    }
+
+    public int getYCoord() {
+        return this.yCoord;
+    }
 }
 

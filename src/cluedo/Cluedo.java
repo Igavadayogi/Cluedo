@@ -18,10 +18,10 @@ public class Cluedo {
      */
     public static void main(String[] args) throws Exception {
 
-//        Menu menu = new Menu();
-//        menu.setVisible(true);
-        Game g = new Game();
-        g.init();
+        Menu menu = new Menu();
+        menu.setVisible(true);
+//        Game g = new Game();
+//        g.init();
     }
 
 }

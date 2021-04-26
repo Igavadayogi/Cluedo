@@ -14,8 +14,6 @@ public class Player {
 
     public boolean humanPlayer;
     public String name;
-    private int xCoord;
-    private int yCoord;
     Tokens tokenPicked;
 
     public String getName() {
@@ -29,13 +27,6 @@ public class Player {
         this.tokenPicked = tokenPicked;
     }
 
-    public int getXCoord() {
-        return xCoord;
-    }
-
-    public int getYCoord() {
-        return yCoord;
-    }
 
     public Tokens getToken() {
         return tokenPicked;
