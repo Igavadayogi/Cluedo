@@ -10,9 +10,11 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
@@ -27,16 +29,18 @@ import javax.swing.border.LineBorder;
 public class GUI implements ActionListener {
 
     Game game;
-    JFrame frame;
-    JPanel mainPanel;
-    private JTextField turn;
 
-    JPanel boardPanel;
     private JButton[][] boardTiles = new JButton[25][25];
+    private JFrame frame;
+    private JPanel mainPanel;
+    private JTextField turn;
+    private JPanel boardPanel;
     private JPanel rightToolPanel;
-    JButton rollButton;
+    private JButton rollButton;
     private JSplitPane splitPane;
-    
+
+    Board board;
+
 //    public GUI() {
 //        
 //        newGame = new Game();
@@ -44,7 +48,6 @@ public class GUI implements ActionListener {
 //        createGUI();
 ////        SwingUtilities.invokeLater((Runnable) g);
 //    }
-
     public void start() {
 
         game = new Game();
@@ -59,6 +62,7 @@ public class GUI implements ActionListener {
         frame.setResizable(true);
         //Container pane = frame.getContentPane();
         mainPanel = new JPanel();
+
         createGUI();
         frame.add(mainPanel);
         frame.pack();
@@ -67,23 +71,23 @@ public class GUI implements ActionListener {
     }
 
     public void createGUI() {
-        
+
         rightToolPanel = new JPanel();
-        
-        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
-        
+        boardPanel = new JPanel();
+
+        splitPane = new JSplitPane();
+
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        frame.getContentPane().setLayout(new GridLayout());
-        frame.getContentPane().add(splitPane);
-        splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
-        splitPane.setRightComponent(rightToolPanel);           
-        splitPane.setLeftComponent(boardPanel); 
-        
-
-        
-        GridLayout rightPanelLayout = new GridLayout(1, 1, 5, 5);
+        //this needs fixing, it will split to left and right, but everything is on right
+//        frame.getContentPane().setLayout(new GridLayout());
+//        frame.getContentPane().add(splitPane);
+//        splitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
+//        splitPane.setRightComponent(rightToolPanel);
+//        splitPane.setLeftComponent(boardPanel);
+        GridLayout rightPanelLayout = new GridLayout(0, 1, 5, 5);
         rightToolPanel.setLayout(rightPanelLayout);
+        rightToolPanel.add(new JLabel("Cuurent player is: "));//get token name
         rightToolPanel.add(rollButton = new JButton("Roll Dice"));
         rightToolPanel.add(new JButton("Suggest"));
         rightToolPanel.add(new JButton("Accuse"));
@@ -97,20 +101,22 @@ public class GUI implements ActionListener {
 
         mainPanel.add(rightToolPanel);
 
-        boardPanel = new JPanel(new GridLayout(0, 25));
-        boardPanel.setBorder(new LineBorder(Color.BLACK));
-        mainPanel.add(boardPanel);
+        GridLayout leftPanelLayout = new GridLayout(25, 24, 1, 1);
 
-        Insets margin = new Insets(1, 1, 1, 1);
-        for (int i = 0; i < boardTiles.length; i++) {
-            for (int j = 0; j < boardTiles[i].length; j++) {
-                JButton b = new JButton();
-                b.setMargin(margin);
-                b.setBackground(Color.yellow);
-                boardTiles[j][i] = b;
+        boardPanel.setLayout(leftPanelLayout);
+        boardPanel.setBorder(new LineBorder(Color.BLACK));
+
+        for (int i = 0; i < 25; i++) {
+            for (int j = 0; j < 24; j++) {
+
+//                boardTiles[i][j] =  board.boardArray[i][j];
+                boardTiles[i][j] = new JButton("-");
+                boardPanel.add(boardTiles[i][j]);
+
             }
         }
 
+        mainPanel.add(boardPanel);
     }
 
     @Override

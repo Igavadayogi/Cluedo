@@ -6,7 +6,6 @@
 package cluedo;
 
 /**
- * NOT SURE ABOUT THIS ATM Each tile is one block on the board
  *
  * @author Sze Yuen Kwok
  */
@@ -22,6 +21,7 @@ public class Tiles {
         this.token = token;
     }
 
+    
     //incomplete
     public boolean occupied(Tokens token) {
         //if token is already on tile, this tile is not available

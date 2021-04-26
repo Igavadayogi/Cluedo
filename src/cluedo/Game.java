@@ -57,9 +57,11 @@ public class Game implements ActionListener {
 //        player[3] = player4;
 //        player[4] = player4;
 //        player[5] = player6;
+
+
         //init board object
-        board = new Board();
-        board.createBoard();
+//        board = new Board();
+//        board.createBoard();
         
         start();
 
@@ -98,7 +100,7 @@ public class Game implements ActionListener {
                         Scanner s2 = new Scanner(System.in);
                         int x = s2.nextInt();
                         int y = s2.nextInt();
-                        movePlayer(presentTurn, presentTurn.getToken(), x, y);
+                        movePlayer(presentTurn.getToken(), x, y);
                         break;
                     default:
                         break;
@@ -109,6 +111,8 @@ public class Game implements ActionListener {
 
     }
 
+    
+    //should be token
     public void accuse(Player player) {
         //make accusations
         //player will need to choose the cards either before or at this step
@@ -126,6 +130,8 @@ public class Game implements ActionListener {
         checkAccusation(player);
 
     }
+    
+    //shoudl be token
 
     public void checkAccusation(Player player) {
         //check if the player's accusation matches with the envelope
@@ -148,8 +154,10 @@ public class Game implements ActionListener {
         System.out.println("Congradulations, you have won!");
     }
 
+    
+    //should be token
     //input player name, token, new coords
-    public void movePlayer(Player player, Tokens tkn, int newX, int newY) throws Exception {
+    public void movePlayer(Tokens tkn, int newX, int newY) throws Exception {
         //click on board, if exceed diceroll display error message
         //if diagonal display error
         //get the x-y coordinates from player input method
