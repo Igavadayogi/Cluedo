@@ -130,7 +130,7 @@ public class Game implements ActionListener {
         //get from envelope
         //if accuse cards = envelope card then call win emthod
         //otheriwse game continues
-        if (namePicked.equals(cards.getPlayer()) && roomPicked.equals(cards.getRoom()) && weaponPicked.equals(cards.getWeapon())) {
+        if (namePicked.equals(cards.getCharacter()) && roomPicked.equals(cards.getRoom()) && weaponPicked.equals(cards.getWeapon())) {
             win();
         } else {
             System.out.println("Incorrect." + player + "has lose.");

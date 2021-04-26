@@ -6,7 +6,7 @@ package cluedo;
  */
 
 public class Cards {
-    //public class playerCards {
+    //public class characterCards {
         String scarlett = "Miss Scarlett";
         String green = "Rev Green";
         String mustard = "Colonel Mustard";
@@ -47,13 +47,13 @@ public class Cards {
         //choose 1 randomly from each class, fo a total of 3 cards,
         //put in array/assign numbe then use random number generator to determine
        
-        String chosenPlayer = players[(int)(Math.random() * (5-0) + 0)];
+        String chosenCharacter = players[(int)(Math.random() * (5-0) + 0)];
         String chosenRoom = rooms[(int)(Math.random() * (8-0) + 0)];
         String chosenWeapon = weapons[(int)(Math.random() * (5-0) + 0)];
     //}
     
-     public String getPlayer(){
-         return chosenPlayer;
+     public String getCharacter(){
+         return chosenCharacter;
      }
      public String getRoom(){
          return chosenRoom;
