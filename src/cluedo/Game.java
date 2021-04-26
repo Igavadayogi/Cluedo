@@ -27,7 +27,7 @@ public class Game implements ActionListener {
     private String weaponPicked;
 
     MsScarlett msScarlett;
-    
+
     Board board;
     Cards cards;
     Tokens token;
@@ -39,22 +39,59 @@ public class Game implements ActionListener {
         player[3] = player4;
         player[4] = player4;
         player[5] = player6;
-        
+
         player1.setName("Miss Scarlett");
-      //  player1.setTokens(msScarlett);
+        //  player1.setTokens(msScarlett);
         player2.setName("Rev Green");
         player3.setName("Colonel Mustard");
         player4.setName("Professor Plum");
         player5.setName("Mrs. Peacock");
         player6.setName("Mr. White");
-        
+
         board.createBoard();
         
         
-        
+
     }
-    
-    
+
+    public void start() throws Exception {
+        
+        
+        
+        
+        while (true) {
+            System.out.println("Make your move");
+            System.out.println("1.Roll Dice");
+            System.out.println("2.Suggest");
+            System.out.println("3.Accuse");
+            System.out.println("4.Move");
+            Scanner s = new Scanner(System.in);
+            String option = s.nextLine();
+            if (null != option) switch (option) {
+                case "1":
+                    rollDice();
+                    break;
+                case "2":
+                    
+                    break;
+                case "3":
+                   // accuse();
+                    break;
+                case "4":
+                    System.out.println("Please input new coordinates");
+                    Scanner s2 = new Scanner(System.in);
+                    int x = s2.nextInt();
+                    int y = s2.nextInt();
+                    movePlayer(presentTurn, presentTurn.getToken(), x, y);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+    }
+
     public void accuse(Player player) {
         //make accusations
         //player will need to choose the cards either before or at this step
@@ -126,6 +163,7 @@ public class Game implements ActionListener {
         Dice dice = new Dice();
         String result1 = Integer.toString(dice.getDice1());
         String result2 = Integer.toString(dice.getDice2());
+        System.out.println("Dice results: " + result1 + ", " + result2);
         return result1 + result2;
     }
 
