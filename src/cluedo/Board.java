@@ -1,22 +1,41 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cluedo;
 
-/**
- *
- * @author igava
- */
-public class Board {
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.*;
+import java.awt.image.*;
+import java.io.*;
+import java.util.*;
+import javax.imageio.*;
+import javax.swing.*;
 
+
+public class Board extends JComponent{
+    
+    public int turnCounter;
     Tiles[][] boardArray;
-
+    private final int squareWidth = 30;
+    public ArrayList<Tokens> playerToken;
+    public Tokens ActiveToken;
+    
+    private final int rows = 25;
+    private final int columns = 24;
+    private int[][] BoardGrid;
+    private ArrayList<Tokens> tokens;
+    
     public Board() {
 
         this.createBoard();
 
+    }
+    
+    public void init(){
+        tokens.add(new ColMustard(10, 10, "M", this));
+        tokens.add(new MrWhite(10, 9, "W", this));
+        tokens.add(new MrsPeacock(10, 8, "P", this));
+        tokens.add(new MsScarlett(11, 10, "S", this));
+        tokens.add(new ProfPlum(11, 9, "P", this));
+        tokens.add(new RevGreen(11, 8, "G", this));
     }
 
     public Tiles getboardArray(int x, int y) throws Exception {
@@ -39,12 +58,12 @@ public class Board {
 
             }
         }
-        boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
-        boardArray[9][13] = new Tiles(9, 13, new RevGreen());
-        boardArray[9][14] = new Tiles(9, 14, new ColMustard());
-        boardArray[13][12] = new Tiles(13, 12, new ProfPlum());
-        boardArray[13][13] = new Tiles(13, 13, new MrsPeacock());
-        boardArray[13][14] = new Tiles(13, 14, new MrWhite());
+        //boardArray[9][12] = new Tiles(9, 12, new MsScarlett());
+        //boardArray[9][13] = new Tiles(9, 13, new RevGreen());
+        //boardArray[9][14] = new Tiles(9, 14, new ColMustard());
+        //boardArray[13][12] = new Tiles(13, 12, new ProfPlum());
+        //boardArray[13][13] = new Tiles(13, 13, new MrsPeacock());
+        //boardArray[13][14] = new Tiles(13, 14, new MrWhite());
 
     }
 }
