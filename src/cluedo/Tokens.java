@@ -17,9 +17,14 @@ public abstract class Tokens {
     private boolean inRoom = false;
     private int xCoord;
     private int yCoord;
+    final private String symbol;
+    public Board board;    
     
-    public Tokens(){
-        
+    public Tokens(int x, int y, String symbol, Board board){
+        this.xCoord = xCoord;
+        this.yCoord = yCoord;
+        this.symbol = symbol;
+        this.board = board;
     }
     
     public boolean inRoomOrNot(){
@@ -30,12 +35,20 @@ public abstract class Tokens {
         this.inRoom = inRoom;
     }
     
-        public int getXCoord() {
+    public int getXCoord() {
         return this.xCoord;
     }
 
     public int getYCoord() {
         return this.yCoord;
+    }
+    
+    public void setXCoord(int x){
+        this.xCoord = xCoord;
+    }
+    
+    public void setYCoord(int y){
+        this.yCoord = yCoord;
     }
 }
 

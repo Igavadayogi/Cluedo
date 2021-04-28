@@ -11,4 +11,8 @@ package cluedo;
  */
 public class MrsPeacock extends Tokens {
     
+    public MrsPeacock(int x, int y, String symbol, Board board) {
+        super(x, y, symbol, board);
+    }
+    
 }

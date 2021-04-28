@@ -12,4 +12,8 @@ package cluedo;
  */
 public class MsScarlett extends Tokens {
     
+    public MsScarlett(int x, int y, String symbol, Board board) {
+        super(x, y, symbol, board);
+    }
+    
 }

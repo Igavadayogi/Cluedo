@@ -11,4 +11,8 @@ package cluedo;
  */
 public class ColMustard extends Tokens {
     
+    public ColMustard(int x, int y, String symbol, Board board) {
+        super(x, y, symbol, board);
+    }
+    
 }

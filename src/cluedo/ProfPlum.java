@@ -11,4 +11,8 @@ package cluedo;
  */
 public class ProfPlum extends Tokens {
     
+    public ProfPlum(int x, int y, String symbol, Board board) {
+        super(x, y, symbol, board);
+    }
+    
 }

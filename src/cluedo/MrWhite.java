@@ -11,4 +11,8 @@ package cluedo;
  */
 public class MrWhite extends Tokens {
     
+    public MrWhite(int x, int y, String symbol, Board board) {
+        super(x, y, symbol, board);
+    }
+    
 }
