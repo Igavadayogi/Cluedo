@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class Cards {
     //public class characterCards {
-    ArrayList<String> characterCards = new ArrayList<>(Arrays.asList("Ms Scarlett", "Rev Green", "Colonel Mustard", "Mrs. Peacock", "Mr. White"));
+    ArrayList<String> characterCards = new ArrayList<>(Arrays.asList("Ms Scarlett", "Rev Green", "Colonel Mustard", "Mrs. Peacock", "Mr. White", "Professor Plum"));
         //String green = "Rev Green";
         //String mustard = "Colonel Mustard";
         //String plum = "Professor Plum";
