@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 /**
  *
- * @author matth
+ * @author matt
  */
 
 public class Cards {

@@ -7,7 +7,7 @@ package cluedo;
 
 /**
  * This class is for the actual pieces on the board, not to be confused with players
- * @author user
+ * @author matt
  */
 
 
@@ -18,9 +18,9 @@ public abstract class Tokens {
     private int xCoord;
     private int yCoord;
     final private String symbol;
-    public Board board;    
+    public Board2 board;    
     
-    public Tokens(int x, int y, String symbol, Board board){
+    public Tokens(int x, int y, String symbol, Board2 board){
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.symbol = symbol;

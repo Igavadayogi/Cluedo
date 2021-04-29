@@ -29,13 +29,13 @@ public class Board extends JComponent{
 
     }
     
-    public void init(){
-        tokens.add(new ColMustard(10, 10, "M", this));
-        tokens.add(new MrWhite(10, 9, "W", this));
-        tokens.add(new MrsPeacock(10, 8, "P", this));
-        tokens.add(new MsScarlett(11, 10, "S", this));
-        tokens.add(new ProfPlum(11, 9, "P", this));
-        tokens.add(new RevGreen(11, 8, "G", this));
+    public void init(){ // Enable this to use this board
+        //tokens.add(new ColMustard(10, 10, "M", this));
+        //tokens.add(new MrWhite(10, 9, "W", this));
+        //tokens.add(new MrsPeacock(10, 8, "P", this));
+        //tokens.add(new MsScarlett(11, 10, "S", this));
+        //tokens.add(new ProfPlum(11, 9, "P", this));
+        //tokens.add(new RevGreen(11, 8, "G", this));
     }
 
     public Tiles getboardArray(int x, int y) throws Exception {

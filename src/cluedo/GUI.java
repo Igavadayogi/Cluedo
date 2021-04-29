@@ -10,6 +10,7 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -38,8 +39,9 @@ public class GUI implements ActionListener {
     private JPanel rightToolPanel;
     private JButton rollButton;
     private JSplitPane splitPane;
-
+    
     Board board;
+    
 
 //    public GUI() {
 //        
@@ -122,5 +124,9 @@ public class GUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private void drawGameBoard(){
+        
     }
 }
