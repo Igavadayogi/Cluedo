@@ -6,7 +6,7 @@
 package cluedo;
 
 /**
- * may not be needed 
+ *
  * Class to track movement of the player
  * @author Sze Yuen Kwok
  */

@@ -6,7 +6,7 @@
 package cluedo;
 
 /**
- *
+ * Tile object
  * @author Sze Yuen Kwok
  */
 public class Tiles {

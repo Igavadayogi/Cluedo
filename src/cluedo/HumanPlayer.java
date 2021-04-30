@@ -6,12 +6,13 @@
 package cluedo;
 
 /**
- *
+ * subclass of player class
  * @author user
  */
-public class HumanPlayer extends Player{
-    public HumanPlayer(String name){
+public class HumanPlayer extends Player {
+
+    public HumanPlayer(String name) {
         this.humanPlayer = true;
-        
+
     }
 }

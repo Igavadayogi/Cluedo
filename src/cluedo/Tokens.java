@@ -10,17 +10,22 @@ package cluedo;
  * @author matt
  */
 
-
-//not sure what to put in this class
 public abstract class Tokens {
     
     private boolean inRoom = false;
     private int xCoord;
     private int yCoord;
     final private String symbol;
-    public Board2 board;    
+    public Board2 board;    //to switch to text base, change class Board2 to Board
     
-    public Tokens(int x, int y, String symbol, Board2 board){
+    /**
+     *
+     * @param x
+     * @param y
+     * @param symbol
+     * @param board
+     */
+    public Tokens(int x, int y, String symbol, Board2 board){   //to switch to text base, change class Board2 to Board
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.symbol = symbol;

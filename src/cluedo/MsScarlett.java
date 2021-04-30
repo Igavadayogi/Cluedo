@@ -5,15 +5,15 @@ package cluedo;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
+ * subclass of token class
  *
  * @author user
  */
 public class MsScarlett extends Tokens {
-    
+
     public MsScarlett(int x, int y, String symbol, Board2 board) { // Change class "Board" to switch from different versions of board
         super(x, y, symbol, board);
     }
-    
+
 }

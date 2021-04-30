@@ -7,15 +7,13 @@ package cluedo;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 /**
  *
  * This class handles all the functions of the game
  *
- * @author user
+ * @author Sze Yuen Kwok/igava/matt
  */
 public class Game implements ActionListener {
 
@@ -42,7 +40,7 @@ public class Game implements ActionListener {
         Player player4 = new Player();
         Player player5 = new Player();
         Player player6 = new Player();
-        
+
         player1.setName("Miss Scarlett");
         //  player1.setTokens(msScarlett);
         player2.setName("Rev Green");
@@ -50,32 +48,28 @@ public class Game implements ActionListener {
         player4.setName("Professor Plum");
         player5.setName("Mrs. Peacock");
         player6.setName("Mr. White");
-        
+
 //        player[0] = player1;
 //        player[1] = player2;
 //        player[2] = player3;
 //        player[3] = player4;
 //        player[4] = player4;
 //        player[5] = player6;
-
-
         //init board object
 //        board = new Board();
 //        board.createBoard();
-        
         start();
 
     }
-    
 
-    
-
-  
-    
+    /**
+     * This method prints the text based menu
+     *
+     * @throws java.lang.Exception
+     */
     public void start() throws Exception {
 
         while (true) {
-            
 
             System.out.println("Make your move");
             System.out.println("1.Roll Dice");
@@ -111,9 +105,33 @@ public class Game implements ActionListener {
 
     }
 
-    
-    //should be token
-    public void accuse(Player player) {
+    /**
+     * Suggest method, gets input from user
+     *
+     * half-functional at the moment
+     *
+     */
+    public void suggest() {
+        System.out.println("Please input suggest choices in the following order: name, room, weapon");
+        System.out.println("Here are the options: ");
+        System.out.println("Miss Scarlett, Rev Green, Colonel Mustard, Professor Plum, Mrs. Peacock, Mr. White");
+        System.out.println("Candlestick, Dagger, Lead Pipe, Revolver, Rope, Wrench");
+
+        Scanner s2 = new Scanner(System.in);
+        namePicked = s2.nextLine();
+        roomPicked = s2.nextLine();
+        weaponPicked = s2.nextLine();
+
+        System.out.println("Suggested: " + namePicked + ", " + roomPicked + ", " + weaponPicked);
+    }
+
+    /**
+     * method to accuse, get input from user then calls the checkAccusation
+     * method to compare
+     *
+     * method parameter should be get token
+     */
+    public void accuse() {
         //make accusations
         //player will need to choose the cards either before or at this step
         //show a frame with 3 lists, after choosing, then press enter
@@ -127,66 +145,84 @@ public class Game implements ActionListener {
         roomPicked = s1.nextLine();
         weaponPicked = s1.nextLine();
 
-        checkAccusation(player);
+        checkAccusation(namePicked, roomPicked, weaponPicked);
 
     }
-    
-    //shoudl be token
 
-    public void checkAccusation(Player player) {
-        //check if the player's accusation matches with the envelope
-        //get contents of the envelope and compare
-        //if true that player wins
-
-        //get from envelope
-        //if accuse cards = envelope card then call win emthod
-        //otheriwse game continues
-        if (namePicked.equals(cards.getCharacter()) && roomPicked.equals(cards.getRoom()) && weaponPicked.equals(cards.getWeapon())) {
+    /**
+     * method to compare user's input with the contents of the envelope if
+     * correct, call win method, if not game continues
+     *
+     * @param name
+     * @param room
+     * @param weapon
+     */
+    public void checkAccusation(String name, String room, String weapon) {
+        if (name.equals(cards.getCharacter()) && room.equals(cards.getRoom()) && weapon.equals(cards.getWeapon())) {
             win();
         } else {
-            System.out.println("Incorrect." + player + "has lose.");
+            System.out.println("Incorrect. You lose!");
         }
 
     }
 
+    /*
+    * win method, prints win statement
+     */
     public void win() {
         //display win message, end game
         System.out.println("Congradulations, you have won!");
     }
 
-    
-    //should be token
-    //input player name, token, new coords
+    /**
+     * non-functional at the moment
+     *
+     * method to move player
+     *
+     * supposed to get player input of new coordinates get players token, then
+     * get old coordinate of token replace old token position with empty tile
+     * replace new tiles position with token symbol
+     *
+     * @param tkn
+     * @param newX
+     * @param newY
+     * @throws Exception
+     */
     public void movePlayer(Tokens tkn, int newX, int newY) throws Exception {
         //click on board, if exceed diceroll display error message
         //if diagonal display error
         //get the x-y coordinates from player input method
-
-        //get players/tokens current pos in tile board
         int oldX = tkn.getXCoord();
         int oldY = tkn.getYCoord();
 
-        //old coord is replaced by empty tile
-        //new coord is replaced by player/token occupied tile
         board.boardArray[oldX][oldY] = new Tiles(oldX, oldY, null);
         board.boardArray[newX][newY] = new Tiles(newX, newY, tkn);
 
         //Tiles newPos = board.boardArray[newX][newY];
     }
 
+    /*
+    * method to check player move, could be done it tokens
+    * non-functional at the moment
+     */
     public void checkMove() {
-        //check with dice and if diagnal(compare with board coordinates
+        //check with dice and if diagnal(compare with board coordinates)
         //diplay error when player move into room without using the door  
     }
 
+    /*
+    * method to move to next turn(next player)
+    * non-functional at the moment
+     */
     public void nextTurn() {
         //give control to next player
         //show next player information, store and remove current player information
     }
 
     /**
-     *
-     * @return
+     * COMPLETED
+     * method to roll dice, returns the total of dice 1 and dice 2 
+     * @return 
      */
     public static String rollDice() {
         Dice dice = new Dice();
@@ -197,82 +233,32 @@ public class Game implements ActionListener {
         return result;
     }
 
+    /*
+    * method to choose to save game or not
+    * not planned, non-functional
+    */
     public void chooseSaveGameOrNot() {
         //shows when exiting the game
     }
 
+        /*
+    * method to save game
+    * not planned, non-functional
+    */
     public void saveGame() {
         //write text file, use buffer reader
         //should be a button 
     }
 
+     /*
+    * method to load previous game
+    * not planned, non-functional
+    * could use read/write
+    */
     public void loadGame() {
         //load from text file, use file reader
     }
 
-//    public void commenceMove(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
-//
-//        player[0] = player1;
-//        player[1] = player2;
-//        player[2] = player3;
-//        player[3] = player4;
-//        player[4] = player5;
-//        player[5] = player6;
-//
-//        board.restoreBoard();
-//
-//        //temp for test
-//        this.presentTurn = player1;
-//
-//        /*
-//        if(user1.isMsScarlett()){
-//            this.presentTurn = user1;
-//        }
-//         */
-//    }
-    //move by replacing
-//    public boolean playerAction(Player player, int beginX, int beginY, int finishX, int finishY) throws Exception{
-//        Tiles beginBA = board.getboardArray(beginX, finishY);
-//        Tiles finishBA = board.getboardArray(beginY, finishY);
-//        Movement move = new Movement(player, beginBA, finishBA);
-////        return this.createMove(move, player);
-//        
-//    }
-//    public boolean createMove(Movement move, Player player){
-//        Tokens rootTokens = move.getBegin().getTokens();
-//        if(rootTokens == null){
-//            return false;
-//        }
-//        
-//        if(player != presentTurn){
-//            return false;
-//        }
-//            
-    //commented because Ms Scarlett is not defined yet
-    /*
-        if(rootTokens.isMsScralett() != player.isMsScarlett){
-            return false;
-        }
-     */
-    //commented because canMove isn't implemented
-    //Or it's been implemented but idk 
-    //Checking if the the move is valid
-    /*
-        if(!rootTokens.canMove(board, move.getBegin(), move.getFinish)){
-            return false
-        }
-     */
-    //moving the player from begin to finish position 
-//        Tokens tokenDest = move.getBegin().getTokens();
-//        move.getFinish().setTokens(move.getBegin().getToken());
-//        move.getBegin.setTokens();
-//        
-    /*
-        if(tokenDest != null && rootToken instanceof ){
-        
-        }
-     */
-//        }
     @Override
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

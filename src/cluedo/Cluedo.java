@@ -5,16 +5,16 @@
  */
 package cluedo;
 
-import java.util.Scanner;
-
 /**
- *
+ * This class initialize the GUI menu
  * @author igava
  */
 public class Cluedo {
 
     /**
+     * 
      * @param args the command line arguments
+     * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
 

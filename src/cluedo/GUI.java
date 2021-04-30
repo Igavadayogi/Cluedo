@@ -7,11 +7,8 @@ package cluedo;
 
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,11 +22,11 @@ import javax.swing.border.LineBorder;
 
 /**
  *
+ * GUI class to display GUI
+ *
  * @author Sze Yuen Kwok
  */
 public class GUI implements ActionListener {
-
-    Game game;
 
     private JButton[][] boardTiles = new JButton[25][25];
     private JFrame frame;
@@ -39,17 +36,12 @@ public class GUI implements ActionListener {
     private JPanel rightToolPanel;
     private JButton rollButton;
     private JSplitPane splitPane;
-    
+    private JButton suggestButton;
+    private JButton accuseButton;
+    private JButton showCardButton;
     Board board;
-    
+    Game game;
 
-//    public GUI() {
-//        
-//        newGame = new Game();
-//        
-//        createGUI();
-////        SwingUtilities.invokeLater((Runnable) g);
-//    }
     public void start() {
 
         game = new Game();
@@ -62,9 +54,7 @@ public class GUI implements ActionListener {
         frame = new JFrame("Cluedo");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(true);
-        //Container pane = frame.getContentPane();
         mainPanel = new JPanel();
-
         createGUI();
         frame.add(mainPanel);
         frame.pack();
@@ -72,6 +62,9 @@ public class GUI implements ActionListener {
 
     }
 
+    /*
+    * method to create the GUI
+    */
     public void createGUI() {
 
         rightToolPanel = new JPanel();
@@ -81,7 +74,7 @@ public class GUI implements ActionListener {
 
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
-        //this needs fixing, it will split to left and right, but everything is on right
+        //this needs fixing, it should split to left and right, but everything is on right
 //        frame.getContentPane().setLayout(new GridLayout());
 //        frame.getContentPane().add(splitPane);
 //        splitPane.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
@@ -91,13 +84,25 @@ public class GUI implements ActionListener {
         rightToolPanel.setLayout(rightPanelLayout);
         rightToolPanel.add(new JLabel("Cuurent player is: "));//get token name
         rightToolPanel.add(rollButton = new JButton("Roll Dice"));
-        rightToolPanel.add(new JButton("Suggest"));
-        rightToolPanel.add(new JButton("Accuse"));
-        rightToolPanel.add(new JButton("Show Cards"));
+        rightToolPanel.add(suggestButton = new JButton("Suggest"));
+        rightToolPanel.add(accuseButton = new JButton("Accuse"));
+        rightToolPanel.add(showCardButton = new JButton("Show Cards"));
 
         rollButton.addActionListener((ActionEvent ae) -> {
             String result = "Dice result: " + Game.rollDice();
             JOptionPane.showMessageDialog(frame, result);
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        });
+
+        suggestButton.addActionListener((ActionEvent ae1) -> {
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        });
+        accuseButton.addActionListener((ActionEvent ae2) -> {
+            game.accuse();
+            //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        });
+
+        showCardButton.addActionListener((ActionEvent ae3) -> {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         });
 
@@ -111,7 +116,7 @@ public class GUI implements ActionListener {
         for (int i = 0; i < 25; i++) {
             for (int j = 0; j < 24; j++) {
 
-//                boardTiles[i][j] =  board.boardArray[i][j];
+//                boardTiles[i][j] =  board.boardArray[i][j]; //need to link to the actual Tile objects
                 boardTiles[i][j] = new JButton("-");
                 boardPanel.add(boardTiles[i][j]);
 
@@ -125,8 +130,5 @@ public class GUI implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    private void drawGameBoard(){
-        
-    }
+
 }

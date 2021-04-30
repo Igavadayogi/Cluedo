@@ -1,15 +1,11 @@
 package cluedo;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import java.awt.image.*;
-import java.io.*;
 import java.util.*;
-import javax.imageio.*;
 import javax.swing.*;
 
-
+/*
+* This class is used to create the board and tile objects
+*/
 public class Board extends JComponent{
     
     public int turnCounter;

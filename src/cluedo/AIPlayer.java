@@ -8,30 +8,30 @@ package cluedo;
 import java.util.ArrayList;
 
 /**
+ * subclass of player class
  *
  * @author user
  */
-public class AIPlayer extends Player{
-    
-    public AIPlayer (String name){
+public class AIPlayer extends Player {
+
+    public AIPlayer(String name) {
         this.humanPlayer = false;
         this.action = new ArrayList<>();
-        action chooseAction  = action.get((int)(Math.random() * ((3-1)+1))+1);//use RNG to pick one action
+        action chooseAction = action.get((int) (Math.random() * ((3 - 1) + 1)) + 1);//use RNG to pick one action
     }
-    
+
     /**
      * Representing a set of action.
      */
     private final ArrayList<action> action;
-    
+
     //an array filled with actions
     //e.g.: [move,move,move,accuse,move,move,move]
     private static class action {
 
         public action() {
-        String[] action = {"Move","Accuse","Roll Dice"};
+            String[] action = {"Move", "Accuse", "Roll Dice"};
         }
     }
 
-
-}   
+}
